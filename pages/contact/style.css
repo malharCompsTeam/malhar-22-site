@@ -78,7 +78,7 @@ body {
   transform: rotate(-25deg);
 }
 
-.contact-header {
+/* .contact-header {
   color: white;
   position: absolute;
   transform: rotate(-90deg);
@@ -87,12 +87,12 @@ body {
 }
 .contact-header h1 {
   font-size: 1.5rem;
-}
+} */
 
 .social-bar {
   position: absolute;
   bottom: 20px;
-  left: 75px;
+  left: 35px;
   z-index: 1;
   width: 100px;
 }
@@ -100,6 +100,7 @@ body {
   list-style-type: none;
 }
 .social-bar ul li {
+  margin: 0 7px;
   display: inline-block;
   color: white;
   width: 25px;
@@ -108,6 +109,11 @@ body {
   text-align: center;
   margin-right: -4px;
   font-size: 1.2rem;
+}
+
+.social-bar ul li a {
+  color: white;
+  text-decoration: none;
 }
 
 .header {
@@ -139,7 +145,7 @@ body {
 .email i {
   color: #f8b7d8;
   font-size: 1.7rem;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
 }
 
 form {
@@ -200,7 +206,7 @@ form button {
 .contact-form-container {
   width: 800px;
   display: grid;
-  grid-template-columns: 1fr 1fr 0fr 1fr;
+  grid-template-columns: 0.5fr 1fr 0fr 1fr;
   grid-template-rows: 0.5fr 0.5fr 2fr;
   grid-template-areas: "contact-us header header header" "contact-us address phone email" "contact-us contact-form contact-form contact-form";
 }
@@ -223,4 +229,49 @@ form button {
 
 .contact-form {
   grid-area: contact-form;
+}
+
+/* 
+
+mobile screens viewport
+
+*/
+@media only screen and (max-width: 560px) {
+  .contact-form-container {
+    width: 350px;
+    height: 560px;
+    grid-template-columns: 0fr 1fr 0fr 1fr;
+    grid-template-rows: 0.5fr 0.3fr 2fr;
+  }
+
+  form {
+    width: 320px;
+  }
+
+  form button {
+    bottom: -65px;
+    left: 35px;
+  }
+
+  .social-bar-mobile {
+    margin-top: 1rem;
+  }
+
+  .social-bar-mobile ul {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    font-size: 2.2rem;
+  }
+
+  .social-bar-mobile ul li {
+    list-style: none;
+    color: white;
+  }
+}
+
+@media only screen and (min-width: 561px) {
+  .social-bar-mobile {
+    display: none;
+  }
 }
