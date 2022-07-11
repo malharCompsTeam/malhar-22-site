@@ -160,7 +160,7 @@ form input,
 form textarea {
   background: white;
   display: block;
-  /* margin: 20px auto; */
+  margin: auto auto 5px auto;
   width: 100%;
   border: 0;
 }
