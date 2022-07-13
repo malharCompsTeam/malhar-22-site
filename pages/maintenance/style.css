@@ -550,8 +550,9 @@ body {
 
 @media only screen and (max-width: 560px){
     #content h1{
-        margin: none;
-        width: 100%;
-        
+        font-size: 1.4rem;
+    }
+    #content p{
+      font-size: 1rem;
     }
 }
