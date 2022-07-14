@@ -141,6 +141,17 @@ body {
   font-size: 1rem;
   font-weight: 500;
 }
+
+.address h3 {
+  text-align: start;
+  margin-left: 6rem;
+}
+
+.email h3 {
+  text-align: end;
+  margin-right: 6rem;
+}
+
 .address i,
 .email i {
   color: #f8b7d8;
@@ -160,7 +171,7 @@ form input,
 form textarea {
   background: white;
   display: block;
-  /* margin: 20px auto; */
+  /* margin: auto auto 5px auto; */
   width: 100%;
   border: 0;
 }
@@ -251,6 +262,16 @@ mobile screens viewport
   form button {
     bottom: -65px;
     left: 35px;
+  }
+
+  .address h3 {
+    text-align: start;
+    margin-left: 1rem;
+  }
+
+  .email h3 {
+    text-align: end;
+    margin-right: 1rem;
   }
 
   .social-bar-mobile {
