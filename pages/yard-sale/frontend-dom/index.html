@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yard Sale webpage</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- 
+        
+        RESERVE PAINTING MODAL
+
+     -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close">&times;</span>
+          <h2>Reserve a painting of your choosing!</h2>
+        </div>
+        <div class="modal-body">
+          <form>
+            <label for="fullName">Full name:</label><br />
+            <input type="text" id="fullName" name="fullName" /><br />
+            <label for="emailID">Email ID:</label><br />
+            <input type="text" id="emailID" name="emailID" /><br /><br />
+            <label for="paintingID">Painting ID:</label><br />
+            <input type="text" id="paintingID" name="paintingID" /><br />
+            <input
+              type="button"
+              value="Submit"
+              id="modalSubmitButton"
+              onclick="onDataSubmission.apply()"
+            />
+          </form>
+        </div>
+        <div class="modal-footer">
+          <h3>Malhar'22</h3>
+        </div>
+      </div>
+    </div>
+
+    <div class="paintingsContainer">
+      <!-- 
+
+            
+            
+         -->
+      <!-- paintingA1 -->
+      <div class="paintingContainer" id="paintingA1">
+        <div class="paintingImageContainer">
+          <img
+            src="https://i.pinimg.com/564x/82/34/5d/82345d821545801d81fe4335d06452b1.jpg"
+            alt=""
+          />
+        </div>
+        <h4>Tamatina Modern Art</h4>
+        <button class="myBtn">Reserve</button>
+      </div>
+
+      <!-- paintingA2 -->
+      <div class="paintingContainer" id="paintingA2">
+        <div class="paintingImageContainer">
+          <img
+            src="https://images-eu.ssl-images-amazon.com/images/I/81nh7yEGiHL._AC_UL348_SR348,348_.jpg"
+            alt=""
+          />
+        </div>
+        <h4>Kamina Modern Art</h4>
+        <button class="myBtn">Reserve</button>
+      </div>
+
+      <!-- paintingA3 -->
+      <div class="paintingContainer" id="paintingA3">
+        <div class="paintingImageContainer">
+          <img
+            src="https://s3.amazonaws.com/gallerist-live/products/28836/large/beautiful-acrylic-painting.jpg?1571493057"
+            alt=""
+          />
+        </div>
+        <h4>Yoko Modern Art</h4>
+        <button class="myBtn">Reserve</button>
+      </div>
+
+      <!-- 
+        
+        
+        
+    --></div>
+
+    <div class="btn">
+      <button type="submit" id="remove" class="btn btn-primary">
+        Remove Form
+      </button>
+    </div>
+
+    <!-- 
+        
+
+        
+        
+        
+        
+
+        
+        
+        
+
+    -->
+
+    <script src="./script.js"></script>
+  </body>
+</html>
