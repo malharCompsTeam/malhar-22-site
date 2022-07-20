@@ -13,7 +13,7 @@
   flex-direction: column;
   flex-flow: row wrap;
 }
-.grid > [class*=column-] {
+.grid > [class*="column-"] {
   display: block;
 }
 
@@ -286,7 +286,7 @@
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: auto;
   }
-  .grid > [class*=column-] {
+  .grid > [class*="column-"] {
     margin: 0;
     max-width: 100%;
   }
@@ -538,7 +538,8 @@
 * {
   box-sizing: border-box;
 }
-*::before, *::after {
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -624,16 +625,64 @@ img {
   animation: fadeIn 0.8s 0.6s ease forwards;
 }
 
-.slider-item {
+
+
+.slider-item1,
+.slider-item2,
+.slider-item3{
   display: none;
 }
-.slider-item.active {
+.slider-item1.active1,
+.slider-item1.active2,
+.slider-item1.active3 {
   display: block;
 }
-.slider-item.active .hide-mobile {
+.slider-item2.active1,
+.slider-item2.active2,
+.slider-item2.active3 {
+  display: block;
+}
+.slider-item3.active1,
+.slider-item3.active2,
+.slider-item3.active3 {
+  display: block;
+}
+
+
+
+.slider-item1.active1 .hide-mobile,
+.slider-item1.active2 .hide-mobile,
+.slider-item1.active3 .hide-mobile {
   display: none;
 }
-.slider-item.active .show-mobile {
+.slider-item2.active1 .hide-mobile,
+.slider-item2.active2 .hide-mobile,
+.slider-item2.active3 .hide-mobile {
+  display: none;
+}
+.slider-item3.active1 .hide-mobile,
+.slider-item3.active2 .hide-mobile,
+.slider-item3.active3 .hide-mobile {
+  display: none;
+}
+
+
+
+.slider-item1.active1 .show-mobile,
+.slider-item1.active2 .show-mobile,
+.slider-item1.active3 .show-mobile {
+  display: block;
+  margin: 1rem 0;
+}
+.slider-item2.active1 .show-mobile,
+.slider-item2.active2 .show-mobile,
+.slider-item2.active3 .show-mobile {
+  display: block;
+  margin: 1rem 0;
+}
+.slider-item3.active1 .show-mobile,
+.slider-item3.active2 .show-mobile,
+.slider-item3.active3 .show-mobile {
   display: block;
   margin: 1rem 0;
 }
@@ -663,10 +712,14 @@ button {
   justify-content: flex-end;
   padding: 0.25rem 0 0.25rem 0;
 }
-.controls .previous {
+.controls .previous1,
+.controls .previous2,
+.controls .previous3 {
   border: 1px solid #232323;
 }
-.controls .next {
+.controls .next1,
+.controls .next2,
+.controls .next3 {
   border-top: 1px solid #232323;
   border-right: 1px solid #232323;
   border-bottom: 1px solid #232323;
@@ -701,7 +754,12 @@ button {
   transform: rotate(45deg);
 }
 
-.previous, .next {
+.previous1,
+.previous2,
+.previous3,
+.next1,
+.next2,
+.next3 {
   display: flex;
   align-content: center;
   justify-content: center;
@@ -709,14 +767,26 @@ button {
   font-size: 2rem;
   color: #232323;
 }
-.previous:hover .icon, .next:hover .icon {
+.previous1:hover .icon,
+.previous2:hover .icon,
+.previous3:hover .icon,
+.next1:hover .icon,
+.next2:hover .icon,
+.next3:hover .icon {
   transform: scale(1.5);
 }
-.previous .icon, .next .icon {
+.previous1 .icon,
+.previous2 .icon,
+.previous3 .icon,
+.next1 .icon,
+.next2 .icon,
+.next3 .icon {
   transition: transform 0.1s ease;
 }
 
-.active .image-holder::before {
+.active1 .image-holder::before,
+.active2 .image-holder::before,
+.active3 .image-holder::before {
   position: absolute;
   content: "";
   z-index: 1;
@@ -784,7 +854,9 @@ button {
   background: #fff;
   text-align: center;
 }
-.flex-nav ul.active {
+.flex-nav ul.active1,
+.flex-nav ul.active2,
+.flex-nav ul.active3 {
   display: flex;
 }
 
@@ -819,15 +891,44 @@ button {
     margin: 1rem 0 0 0;
   }
 
-  .previous, .next {
+  .previous1,
+  .previous2,
+  .previous3,
+  .next1,
+  .next2,
+  .next3 {
     flex-basis: 8.33%;
   }
 
-  .slider-item.active .hide-mobile {
+  .slider-item1.active1 .hide-mobile,
+  .slider-item1.active2 .hide-mobile,
+  .slider-item1.active3 .hide-mobile {
+    display: block;
+  }
+  .slider-item2.active1 .hide-mobile,
+  .slider-item2.active2 .hide-mobile,
+  .slider-item2.active3 .hide-mobile {
+    display: block;
+  }
+  .slider-item3.active1 .hide-mobile,
+  .slider-item3.active2 .hide-mobile,
+  .slider-item3.active3 .hide-mobile {
     display: block;
   }
 
-  .slider-item.active .show-mobile {
+  .slider-item1.active1 .show-mobile,
+  .slider-item1.active2 .show-mobile,
+  .slider-item1.active3 .show-mobile {
+    display: none;
+  }
+  .slider-item2.active1 .show-mobile,
+  .slider-item2.active2 .show-mobile,
+  .slider-item2.active3 .show-mobile {
+    display: none;
+  }
+  .slider-item3.active1 .show-mobile,
+  .slider-item3.active2 .show-mobile,
+  .slider-item3.active3 .show-mobile {
     display: none;
   }
 
