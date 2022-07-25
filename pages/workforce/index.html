@@ -1,418 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Workforce</title>
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-
-    <div class="container">
-      <div class="grid">
-        <div class="column-xs-12">
-          <ul class="slider">
-            <li class="slider-item1 active1">
-              <div class="grid vertical">
-                <div class="column-xs-12 column-md-2 hide-mobile">
-                  <div class="intro">
-                    <a href="#">
-                      <h1 class="title"><span class="underline">Explore Tokyo</span></h1>
-                    </a>
-                  </div>
-                </div>
-                <div class="column-xs-12 column-md-10">
-                  <div class="image-holder">
-                    <img src="https://source.unsplash.com/cddaZDt6uRw">
-                  </div>
-                  <div class="grid">
-                    <div class="column-xs-12 column-md-9">
-                      <div class="intro show-mobile">
-                        <a href="#">
-                          <h1 class="title"><span class="underline">Explore Tokyo</span></h1>
-                        </a>
-                      </div>
-                      <p class="description">Tokyo, Japan’s busy capital, mixes the ultramodern and the traditional, from neon-lit skyscrapers to historic temples.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="slider-item1">
-              <div class="grid vertical">
-                <div class="column-xs-12 column-md-2 hide-mobile">
-                  <div class="intro">
-                    <a href="#">
-                      <h1 class="title"><span class="underline">Explore Kyoto</span></h1>
-                    </a>
-                  </div>
-                </div>
-                <div class="column-xs-12 column-md-10">
-                  <div class="image-holder">
-                    <img src="https://source.unsplash.com/Pz3EHf-KJfc">
-                  </div>
-                  <div class="grid">
-                    <div class="column-xs-12 column-md-9">
-                      <div class="intro show-mobile">
-                        <a href="#">
-                          <h1 class="title"><span class="underline">Explore Kyoto</span></h1>
-                        </a>
-                      </div>
-                      <p class="description">Kyoto is famous for its numerous classical Buddhist temples, gardens, imperial palaces, Shinto shrines and traditional wooden houses.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="slider-item1">
-              <div class="grid vertical">
-                <div class="column-xs-12 column-md-2 hide-mobile">
-                  <div class="intro">
-                    <a href="#">
-                      <h1 class="title"><span class="underline">Explore Osaka</span></h1>
-                    </a>
-                  </div>
-                </div>
-                <div class="column-xs-12 column-md-10">
-                  <div class="image-holder">
-                    <img src="https://source.unsplash.com/peYW3VwICpE">
-                  </div>
-                  <div class="grid">
-                    <div class="column-xs-12 column-md-9">
-                      <div class="intro show-mobile">
-                        <a href="#">
-                          <h1 class="title"><span class="underline">Explore Osaka</span></h1>
-                        </a>
-                      </div>
-                      <p class="description">Osaka is a large port city and commercial center known for its modern architecture, nightlife and hearty street food.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="slider-item1">
-              <div class="grid vertical">
-                <div class="column-xs-12 column-md-2 hide-mobile">
-                  <div class="intro">
-                    <a href="#">
-                      <h1 class="title"><span class="underline">Explore Hokkaido</span></h1>
-                    </a>
-                  </div>
-                </div>
-                <div class="column-xs-12 column-md-10">
-                  <div class="image-holder">
-                    <img src="https://source.unsplash.com/VmeOZQjTVGE">
-                  </div>
-                  <div class="grid">
-                    <div class="column-xs-12 column-md-9">
-                      <div class="intro show-mobile">
-                        <a href="#">
-                          <h1 class="title"><span class="underline">Explore Hokkaido</span></h1>
-                        </a>
-                      </div>
-                      <p class="description">Hokkaido, the northernmost of Japan’s main islands, is known for its volcanoes, natural hot springs ("onsen") and ski areas.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-          </ul>
-          <div class="grid">
-            <div class="column-xs-12">
-              <div class="controls">
-                <button class="previous1">
-                  <span class="visually-hidden">Previous</span>
-                  <span class="icon arrow-left" aria-hidden="true"></span>
-                  </a>
-                  <button class="next1">
-                    <span class="visually-hidden">Next</span>
-                    <span class="icon arrow-right" aria-hidden="true"></span>
-                    </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Workforce Page</title>
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <section class="slider">
+      <div class="reviews">
+        <h2><span>/</span>Workforce</h2>
       </div>
+      <div class="slide-container"></div>
+      <!-- buttons -->
+      <!-- prev btn -->
+      <button class="btn prev-btn">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <!-- next button -->
+      <button class="btn next-btn">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </section>
 
-      <!-- 
+    <!--  -->
 
+	<section class="slider1">
+		<div class="reviews1">
+		  <h2><span>/</span>Workforce</h2>
+		</div>
+		<div class="slide-container1"></div>
+		<!-- buttons -->
+		<!-- prev btn -->
+		<button class="btn1 prev-btn1">
+		  <i class="fas fa-chevron-left"></i>
+		</button>
+		<!-- next button -->
+		<button class="btn1 next-btn1">
+		  <i class="fas fa-chevron-right"></i>
+		</button>
+	  </section>
 
-
-
-
-
-       -->
-
-    <div class="container">
-      <div class="grid">
-        <div class="column-xs-12">
-          <ul class="slider">
-            <li class="slider-item2 active2">
-              <div class="grid vertical">
-                <div class="column-xs-12 column-md-2 hide-mobile">
-                  <div class="intro">
-                    <a href="#">
-                      <h1 class="title"><span class="underline">Explore Tokyo</span></h1>
-                    </a>
-                  </div>
-                </div>
-                <div class="column-xs-12 column-md-10">
-                  <div class="image-holder">
-                    <img src="https://source.unsplash.com/cddaZDt6uRw">
-                  </div>
-                  <div class="grid">
-                    <div class="column-xs-12 column-md-9">
-                      <div class="intro show-mobile">
-                        <a href="#">
-                          <h1 class="title"><span class="underline">Explore Tokyo</span></h1>
-                        </a>
-                      </div>
-                      <p class="description">Tokyo, Japan’s busy capital, mixes the ultramodern and the traditional, from neon-lit skyscrapers to historic temples.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="slider-item2">
-              <div class="grid vertical">
-                <div class="column-xs-12 column-md-2 hide-mobile">
-                  <div class="intro">
-                    <a href="#">
-                      <h1 class="title"><span class="underline">Explore Kyoto</span></h1>
-                    </a>
-                  </div>
-                </div>
-                <div class="column-xs-12 column-md-10">
-                  <div class="image-holder">
-                    <img src="https://source.unsplash.com/Pz3EHf-KJfc">
-                  </div>
-                  <div class="grid">
-                    <div class="column-xs-12 column-md-9">
-                      <div class="intro show-mobile">
-                        <a href="#">
-                          <h1 class="title"><span class="underline">Explore Kyoto</span></h1>
-                        </a>
-                      </div>
-                      <p class="description">Kyoto is famous for its numerous classical Buddhist temples, gardens, imperial palaces, Shinto shrines and traditional wooden houses.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="slider-item2">
-              <div class="grid vertical">
-                <div class="column-xs-12 column-md-2 hide-mobile">
-                  <div class="intro">
-                    <a href="#">
-                      <h1 class="title"><span class="underline">Explore Osaka</span></h1>
-                    </a>
-                  </div>
-                </div>
-                <div class="column-xs-12 column-md-10">
-                  <div class="image-holder">
-                    <img src="https://source.unsplash.com/peYW3VwICpE">
-                  </div>
-                  <div class="grid">
-                    <div class="column-xs-12 column-md-9">
-                      <div class="intro show-mobile">
-                        <a href="#">
-                          <h1 class="title"><span class="underline">Explore Osaka</span></h1>
-                        </a>
-                      </div>
-                      <p class="description">Osaka is a large port city and commercial center known for its modern architecture, nightlife and hearty street food.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="slider-item2">
-              <div class="grid vertical">
-                <div class="column-xs-12 column-md-2 hide-mobile">
-                  <div class="intro">
-                    <a href="#">
-                      <h1 class="title"><span class="underline">Explore Hokkaido</span></h1>
-                    </a>
-                  </div>
-                </div>
-                <div class="column-xs-12 column-md-10">
-                  <div class="image-holder">
-                    <img src="https://source.unsplash.com/VmeOZQjTVGE">
-                  </div>
-                  <div class="grid">
-                    <div class="column-xs-12 column-md-9">
-                      <div class="intro show-mobile">
-                        <a href="#">
-                          <h1 class="title"><span class="underline">Explore Hokkaido</span></h1>
-                        </a>
-                      </div>
-                      <p class="description">Hokkaido, the northernmost of Japan’s main islands, is known for its volcanoes, natural hot springs ("onsen") and ski areas.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-          </ul>
-          <div class="grid">
-            <div class="column-xs-12">
-              <div class="controls">
-                <button class="previous2">
-                  <span class="visually-hidden">Previous</span>
-                  <span class="icon arrow-left" aria-hidden="true"></span>
-                  </a>
-                  <button class="next2">
-                    <span class="visually-hidden">Next</span>
-                    <span class="icon arrow-right" aria-hidden="true"></span>
-                    </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        </div>
-      </div>
-
-      <!-- 
-
-
-
-
-
-
-       -->
-
-    <div class="container">
-      <div class="grid">
-        <div class="column-xs-12">
-          <ul class="slider">
-            <li class="slider-item3 active3">
-              <div class="grid vertical">
-                <div class="column-xs-12 column-md-2 hide-mobile">
-                  <div class="intro">
-                    <a href="#">
-                      <h1 class="title"><span class="underline">Explore Tokyo</span></h1>
-                    </a>
-                  </div>
-                </div>
-                <div class="column-xs-12 column-md-10">
-                  <div class="image-holder">
-                    <img src="https://source.unsplash.com/cddaZDt6uRw">
-                  </div>
-                  <div class="grid">
-                    <div class="column-xs-12 column-md-9">
-                      <div class="intro show-mobile">
-                        <a href="#">
-                          <h1 class="title"><span class="underline">Explore Tokyo</span></h1>
-                        </a>
-                      </div>
-                      <p class="description">Tokyo, Japan’s busy capital, mixes the ultramodern and the traditional, from neon-lit skyscrapers to historic temples.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="slider-item3">
-              <div class="grid vertical">
-                <div class="column-xs-12 column-md-2 hide-mobile">
-                  <div class="intro">
-                    <a href="#">
-                      <h1 class="title"><span class="underline">Explore Kyoto</span></h1>
-                    </a>
-                  </div>
-                </div>
-                <div class="column-xs-12 column-md-10">
-                  <div class="image-holder">
-                    <img src="https://source.unsplash.com/Pz3EHf-KJfc">
-                  </div>
-                  <div class="grid">
-                    <div class="column-xs-12 column-md-9">
-                      <div class="intro show-mobile">
-                        <a href="#">
-                          <h1 class="title"><span class="underline">Explore Kyoto</span></h1>
-                        </a>
-                      </div>
-                      <p class="description">Kyoto is famous for its numerous classical Buddhist temples, gardens, imperial palaces, Shinto shrines and traditional wooden houses.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="slider-item3">
-              <div class="grid vertical">
-                <div class="column-xs-12 column-md-2 hide-mobile">
-                  <div class="intro">
-                    <a href="#">
-                      <h1 class="title"><span class="underline">Explore Osaka</span></h1>
-                    </a>
-                  </div>
-                </div>
-                <div class="column-xs-12 column-md-10">
-                  <div class="image-holder">
-                    <img src="https://source.unsplash.com/peYW3VwICpE">
-                  </div>
-                  <div class="grid">
-                    <div class="column-xs-12 column-md-9">
-                      <div class="intro show-mobile">
-                        <a href="#">
-                          <h1 class="title"><span class="underline">Explore Osaka</span></h1>
-                        </a>
-                      </div>
-                      <p class="description">Osaka is a large port city and commercial center known for its modern architecture, nightlife and hearty street food.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="slider-item3">
-              <div class="grid vertical">
-                <div class="column-xs-12 column-md-2 hide-mobile">
-                  <div class="intro">
-                    <a href="#">
-                      <h1 class="title"><span class="underline">Explore Hokkaido</span></h1>
-                    </a>
-                  </div>
-                </div>
-                <div class="column-xs-12 column-md-10">
-                  <div class="image-holder">
-                    <img src="https://source.unsplash.com/VmeOZQjTVGE">
-                  </div>
-                  <div class="grid">
-                    <div class="column-xs-12 column-md-9">
-                      <div class="intro show-mobile">
-                        <a href="#">
-                          <h1 class="title"><span class="underline">Explore Hokkaido</span></h1>
-                        </a>
-                      </div>
-                      <p class="description">Hokkaido, the northernmost of Japan’s main islands, is known for its volcanoes, natural hot springs ("onsen") and ski areas.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-          </ul>
-          <div class="grid">
-            <div class="column-xs-12">
-              <div class="controls">
-                <button class="previous3">
-                  <span class="visually-hidden">Previous</span>
-                  <span class="icon arrow-left" aria-hidden="true"></span>
-                  </a>
-                  <button class="next3">
-                    <span class="visually-hidden">Next</span>
-                    <span class="icon arrow-right" aria-hidden="true"></span>
-                    </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        </div>
-      </div>
-
-  <!-- 
-
-
-
-   -->
-      <script src="./script.js"></script>
-</body>
+    <script type="module" src="./app.js"></script>
+    <!-- <script type="module" src="./app1.js"></script> -->
+  </body>
 </html>
