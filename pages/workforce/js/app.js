@@ -117,10 +117,12 @@ const startSlider1 = (type) => {
     next.classList.add("last1");
     next = last.previousElementSibling;
     if (!next) {
-      next = container.lastElementChild;
+      next = container1.lastElementChild;
     }
     next.classList.remove(["next1"]);
-    next.classList.add("active1");
+    // below mf gives serious bugs, do not touch
+    // next.classList.add("active1");
+    //next.classList.add("active1");
     return;
   }
   active.classList.add("last1");
