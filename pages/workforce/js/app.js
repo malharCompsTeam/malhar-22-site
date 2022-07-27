@@ -122,7 +122,6 @@ const startSlider1 = (type) => {
     next.classList.remove(["next1"]);
     // below mf gives serious bugs, do not touch
     // next.classList.add("active1");
-    //next.classList.add("active1");
     return;
   }
   active.classList.add("last1");
