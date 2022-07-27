@@ -7,7 +7,8 @@
 
 body {
   /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab); */
-  background: linear-gradient(
+  background: linear-gradient(-45deg, #ffe44e, #ffed8a, #1cb3d1, #8ddaff);
+  /* background: linear-gradient(
     -45deg,
     #172347,
     #025385,
@@ -15,7 +16,7 @@ body {
     #04e2b7,
     #038298,
     #015268
-  );
+  ); */
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
 
@@ -52,7 +53,7 @@ body {
   position: relative;
   /* width: 250px; */
   /* background: #c3e0ec; */
-  background: #25d6b3;
+  background: #68b2d4;
   overflow: hidden;
 }
 .contact-us:before {
@@ -63,7 +64,7 @@ body {
   height: 250px;
   width: 400px;
   /* background: #f8b7d8; */
-  background: #172347;
+  background: #8cecff;
   transform: rotate(25deg);
 }
 .contact-us:after {
@@ -74,7 +75,7 @@ body {
   height: 270px;
   width: 400px;
   /* background: #9ed8eb; */
-  background: #015268;
+  background: #ffe44e;
   transform: rotate(-25deg);
 }
 
@@ -220,6 +221,7 @@ form button {
   grid-template-columns: 0.5fr 1fr 0fr 1fr;
   grid-template-rows: 0.5fr 0.5fr 2fr;
   grid-template-areas: "contact-us header header header" "contact-us address phone email" "contact-us contact-form contact-form contact-form";
+  box-shadow: 0 12px 25px black;
 }
 
 .contact-us {
