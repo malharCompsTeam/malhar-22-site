@@ -26,7 +26,7 @@
             <ul>
               <li>
                 <a href="" target="_blank">
-                  <i class="fab fa-facebook-f"> </i>
+                  <i class="fab fa-facebook"> </i>
                 </a>
               </li>
               <li>
@@ -35,7 +35,7 @@
                 </a>
               </li>
               <li>
-                <a href="" target="_blank"
+                <a href="" target="_blank">
                   <i class="fab fa-instagram"> </i>
                 </a>
               </li>
@@ -65,37 +65,58 @@
 
         <div class="contact-form">
           <form name="google-sheet">
-            <input type="text" name="Name" placeholder="Enter your full name" />
             <input
-              type="email"
-              name="Email"
-              placeholder="Enter your email address"
+              type="text"
+              name="Name"
+              placeholder="Full name: John Doe"
+              required
             />
             <input
-              type="number"
+              type="email"
+              pattern="[A-Za-z\.\@]{2,50}"
+              name="Email"
+              placeholder="Email address: john.doe@gmail.com"
+              required
+            />
+            <input
+              type="tel"
               name="Phone"
-              placeholder="Enter your contact number"
+              pattern="[0-9]{10}"
+              title="Please enter a valid phone number."
+              placeholder="Contact number: 123-456-7890"
+              required
             />
             <textarea
               name="Issues"
               id="issues"
               rows="2"
+              pattern="[A-Za-z\.]{5,200}"
               placeholder="Let us know your thoughts ..."
+              title="200 words limit reached. Reduce some text."
+              required
             ></textarea>
-            <button type="submit" name="submit">SEND</button>
+            <button type="submit" name="submit" id="contact-form-submitBtn">
+              SEND
+            </button>
           </form>
         </div>
       </div>
       <div class="social-bar-mobile">
         <ul>
           <li>
-            <i class="fab fa-facebook-f"> </i>
+            <a href="" target="_blank">
+              <i class="fab fa-facebook"> </i>
+            </a>
           </li>
           <li>
-            <i class="fab fa-youtube"> </i>
+            <a href="" target="_blank">
+              <i class="fab fa-youtube"> </i>
+            </a>
           </li>
           <li>
-            <i class="fab fa-instagram"> </i>
+            <a href="" target="_blank">
+              <i class="fab fa-instagram"> </i>
+            </a>
           </li>
         </ul>
       </div>
@@ -107,19 +128,7 @@
 
      -->
 
-    <script>
-      const scriptURL = "";
-      const form = document.forms["google-sheet"];
-
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        fetch(scriptURL, { method: "POST", body: new FormData(form) })
-          .then((response) =>
-            alert("Thank You! Your submission has been received.")
-          )
-          .catch((error) => console.error("Error!", error.message));
-      });
-    </script>
+    <script src="./script.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </body>
