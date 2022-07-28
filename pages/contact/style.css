@@ -99,20 +99,23 @@ body {
 }
 .social-bar ul {
   list-style-type: none;
+  display: flex;
+  justify-content:space-between;
 }
 .social-bar ul li {
-  margin: 0 7px;
+  /* margin: 0 7px; */
   display: inline-block;
   color: white;
   width: 25px;
   height: 25px;
   line-height: 25px;
   text-align: center;
-  margin-right: -4px;
-  font-size: 1.2rem;
+  /* margin-right: -4px; */
+  font-size: 1.5rem;
 }
 
-.social-bar ul li a {
+.social-bar ul li a,
+.social-bar-mobile ul li a {
   color: white;
   text-decoration: none;
 }
@@ -137,6 +140,11 @@ body {
   padding: 20px 0;
   color: #444;
 }
+
+.email{
+  padding-right: 2px;
+}
+
 .address h3,
 .email h3 {
   font-size: 1rem;
@@ -221,7 +229,7 @@ form button {
   grid-template-columns: 0.5fr 1fr 0fr 1fr;
   grid-template-rows: 0.5fr 0.5fr 2fr;
   grid-template-areas: "contact-us header header header" "contact-us address phone email" "contact-us contact-form contact-form contact-form";
-  box-shadow: 0 12px 25px black;
+  box-shadow: 0 5px 25px black;
 }
 
 .contact-us {
@@ -249,10 +257,12 @@ form button {
 mobile screens viewport
 
 */
-@media only screen and (max-width: 560px) {
+@media only screen and (max-width: 720px) {
   .contact-form-container {
     width: 350px;
     height: 560px;
+    padding: 0.5rem;
+    margin: 2rem 0;
     grid-template-columns: 0fr 1fr 0fr 1fr;
     grid-template-rows: 0.5fr 0.3fr 2fr;
   }
@@ -266,6 +276,10 @@ mobile screens viewport
     left: 35px;
   }
 
+  .address, .email{
+    padding: 0 0 20px 0;
+  }
+
   .address h3 {
     text-align: start;
     margin-left: 1rem;
@@ -277,23 +291,23 @@ mobile screens viewport
   }
 
   .social-bar-mobile {
-    margin-top: 1rem;
+    margin: 2rem 0;
   }
 
   .social-bar-mobile ul {
     display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    font-size: 2.2rem;
+    justify-content: space-evenly;
+    font-size: 1.8rem;
   }
 
   .social-bar-mobile ul li {
     list-style: none;
     color: white;
+    font-size: 3rem;
   }
 }
 
-@media only screen and (min-width: 561px) {
+@media only screen and (min-width: 720px) {
   .social-bar-mobile {
     display: none;
   }
