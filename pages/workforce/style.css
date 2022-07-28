@@ -117,16 +117,19 @@ section {
   position: relative;
 }
 .reviews,
+.reviews2,
 .reviews1 {
   margin-bottom: 4rem;
 }
 .reviews h2,
+.reviews2 h2,
 .reviews1 h2 {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .reviews span,
+.reviews2 span,
 .reviews1 span {
   font-size: 0.85em;
   color: hsl(205, 78%, 60%);
@@ -167,6 +170,7 @@ h4 {
 } */
 /* set buttons */
 .btn,
+.btn2,
 .btn1 {
   position: absolute;
   top: 175px;
@@ -178,23 +182,28 @@ h4 {
   cursor: pointer;
 }
 .next-btn,
+.next-btn2,
 .next-btn1 {
   right: -0.5rem;
 }
 .prev-btn,
+.prev-btn2,
 .prev-btn1 {
   left: -0.5rem;
 }
 @media screen and (min-width: 768px) {
   .next-btn,
+  .next-btn2,
   .next-btn1 {
     right: -5rem;
   }
   .prev-btn,
+  .prev-btn2,
   .prev-btn1 {
     left: -5rem;
   }
   .btn,
+  .btn2,
   .btn1 {
     font-size: 1.3rem;
     padding: 0.35rem 0.5rem;
@@ -202,6 +211,7 @@ h4 {
 }
 /* MORE CSS FOR JS */
 .slide-container,
+.slide-container2,
 .slide-container1 {
   display: flex;
   position: relative;
@@ -209,6 +219,7 @@ h4 {
   overflow: hidden;
 }
 .slide,
+.slide2,
 .slide1 {
   position: absolute;
   top: 0;
@@ -219,15 +230,18 @@ h4 {
   opacity: 0;
 }
 .slide.active,
+.slide2.active2,
 .slide1.active1 {
   opacity: 1;
   transform: translateX(0);
 }
 .slide.next,
+.slide2.next2,
 .slide1.next1 {
   transform: translateX(100%);
 }
 .slide.last,
+.slide2.last2,
 .slide1.last1 {
   transform: translateX(-100%);
 }

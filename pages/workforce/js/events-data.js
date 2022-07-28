@@ -1,4 +1,4 @@
-const people = [
+const eventsPeople = [
   {
     img: "./images/waifu1.jpg",
     name: "ching doe",
@@ -19,4 +19,4 @@ const people = [
   },
 ];
 
-export default people;
+export default eventsPeople;
