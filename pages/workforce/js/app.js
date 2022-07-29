@@ -2,9 +2,9 @@ import eventsData from "./events-data.js";
 import managementData from "./management-data.js";
 import networkingData from "./networking-data.js";
 
-const container = document.querySelector(".slide-container");
-const prevBtn = document.querySelector(".prev-btn");
-const nextBtn = document.querySelector(".next-btn");
+const container3 = document.querySelector(".slide-container3");
+const prevBtn3 = document.querySelector(".prev-btn3");
+const nextBtn3 = document.querySelector(".next-btn3");
 
 const container1 = document.querySelector(".slide-container1");
 const prevBtn1 = document.querySelector(".prev-btn1");
@@ -13,78 +13,6 @@ const nextBtn1 = document.querySelector(".next-btn1");
 const container2 = document.querySelector(".slide-container2");
 const prevBtn2 = document.querySelector(".prev-btn2");
 const nextBtn2 = document.querySelector(".next-btn2");
-
-// if length is 1 hide buttons
-if (eventsData.length === 1) {
-  nextBtn.style.display = "none";
-  prevBtn.style.display = "none";
-}
-
-// if length is 2, add copies of slides
-let eventsPeople = [...eventsData];
-if (eventsData.length === 2) {
-  eventsPeople = [...eventsData, ...eventsData];
-}
-
-container.innerHTML = eventsPeople
-  .map((person, slideIndex) => {
-    const { img, name, job, text } = person;
-    let position = "next";
-    if (slideIndex === 0) {
-      position = "active";
-    }
-    if (slideIndex === eventsPeople.length - 1) {
-      position = "last";
-    }
-    if (eventsData.length <= 1) {
-      position = "active";
-    }
-    return `<article class="slide ${position}">  
-<img src=${img} class="img" alt="${name}"/>  
-<h4>${name}</h4>  
-<p class="title">${job}</p>  
-<p class="text">  
-${text}  
-</p>  
-</article>`;
-  })
-  .join("");
-
-const startSlider = (type) => {
-  // get all three slides active,last next
-  const active = document.querySelector(".active");
-  const last = document.querySelector(".last");
-  let next = active.nextElementSibling;
-  if (!next) {
-    next = container.firstElementChild;
-  }
-  active.classList.remove(["active"]);
-  last.classList.remove(["last"]);
-  next.classList.remove(["next"]);
-  if (type === "prev") {
-    active.classList.add("next");
-    last.classList.add("active");
-    next.classList.add("last");
-    next = last.previousElementSibling;
-    if (!next) {
-      next = container.lastElementChild;
-    }
-    next.classList.remove(["next"]);
-    next.classList.add("last");
-    return;
-  }
-  active.classList.add("last");
-  last.classList.add("next");
-  next.classList.add("active");
-};
-
-nextBtn.addEventListener("click", () => {
-  startSlider();
-});
-
-prevBtn.addEventListener("click", () => {
-  startSlider("prev");
-});
 
 // ====================================================================
 
@@ -115,7 +43,6 @@ container1.innerHTML = managementPeople
     return `<article class="slide1 ${position}">  
 <img src=${img} class="img" alt="${name}"/>  
 <h4>${name}</h4>  
-<p class="title">${job}</p>  
 <p class="text">  
 ${text}  
 </p>  
@@ -190,7 +117,6 @@ container2.innerHTML = networkingPeople
     return `<article class="slide2 ${position}">  
 <img src=${img} class="img" alt="${name}"/>  
 <h4>${name}</h4>  
-<p class="title">${job}</p>  
 <p class="text">  
 ${text}  
 </p>  
@@ -233,4 +159,78 @@ nextBtn2.addEventListener("click", () => {
 
 prevBtn2.addEventListener("click", () => {
   startSlider2("prev2");
+});
+
+// ====================================================================
+
+// if length is 1 hide buttons
+if (eventsData.length === 1) {
+  nextBtn3.style.display = "none";
+  prevBtn3.style.display = "none";
+}
+
+// if length is 2, add copies of slides
+let eventsPeople = [...eventsData];
+if (eventsData.length === 2) {
+  eventsPeople = [...eventsData, ...eventsData];
+}
+
+container3.innerHTML = eventsPeople
+  .map((person, slideIndex) => {
+    const { img, name, job, text } = person;
+    let position = "next3";
+    if (slideIndex === 0) {
+      position = "active3";
+    }
+    if (slideIndex === eventsPeople.length - 1) {
+      position = "last3";
+    }
+    if (eventsData.length <= 1) {
+      position = "active3";
+    }
+    return `<article class="slide3 ${position}">  
+<img src=${img} class="img" alt="${name}"/>  
+<h4>${name}</h4>  
+<p class="text">  
+${text}  
+</p>  
+</article>`;
+  })
+  .join("");
+
+const startSlider3 = (type) => {
+  // get all three slides active,last next
+  const active = document.querySelector(".active3");
+  const last = document.querySelector(".last3");
+  let next = active.nextElementSibling;
+  if (!next) {
+    next = container3.firstElementChild;
+  }
+  active.classList.remove(["active3"]);
+  last.classList.remove(["last3"]);
+  next.classList.remove(["next3"]);
+  if (type === "prev3") {
+    active.classList.add("next3");
+    last.classList.add("active3");
+    next.classList.add("last3");
+    next = last.previousElementSibling;
+    if (!next) {
+      next = container3.lastElementChild;
+    }
+    next.classList.remove(["next3"]);
+    // below mf gives serious bugs, do not touch
+    // next.classList.add("active1");
+    return;
+  }
+  active.classList.add("last3");
+  last.classList.add("next3");
+  next.classList.add("active3");
+};
+
+nextBtn3.addEventListener("click", () => {
+  startSlider3();
+});
+
+prevBtn3.addEventListener("click", () => {
+  startSlider3("prev3");
 });
