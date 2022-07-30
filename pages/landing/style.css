@@ -2,9 +2,9 @@
     font-family: Clash Display;
     src: url(../../font/clash);
 }
-@font-face {
-  font-family: Inter;
-  src: url(../../font/inter);
+
+*{
+  font-family: Clash Display, sans-serif;
 }
 .container {
     position: relative;
@@ -69,11 +69,17 @@
     font-size: 3.5rem;
     line-height: 1.2;
     margin-bottom: 20px;
-    font-weight: 400;
+    font-weight: bold;
     letter-spacing: -0.035em;
-    font-family: Inter, sans-serif;
+    font-family: Clash Display, sans-serif;
     
   }
+
+  .theme{
+    font-family: Clash Display, sans-serif;
+    font-size: 2.5rem;
+  }
+
   .main-content .button {
     position: relative;
     line-height: 1.5;
@@ -96,6 +102,18 @@
   }
   .main-content strong {
     font-weight: normal;
+  }
+
+  .small {
+    display: block;
+    font-size: 1rem;
+    text-align: center;
+    text-shadow: none;
+    line-height: 1.3;
+    font-weight: bold;
+    font-family: Clash Display, sans-serif;
+    font-weight: normal;
+    margin-top: -10px;
   }
   .main-content small {
     display: block;
