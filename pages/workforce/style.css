@@ -1,5 +1,26 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Barlow:400,500,700");
+.SkipLinkText {
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  margin: -1px;
+  padding: -1px;
+  overflow: hidden;
+}
+
+.SkipLinkText:focus {
+  color: #2C3531;
+  background-color: #D1E8E2;
+  display: inline-block;
+  height: auto;
+  width: auto;
+  position: static;
+  margin: auto;
+  text-align: center;
+  text-decoration: none;
+}
+
 *,
 ::after,
 ::before {
@@ -7,6 +28,8 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+
 body {
   font-family: "Barlow", sans-serif;
   background: hsl(210, 36%, 96%);
