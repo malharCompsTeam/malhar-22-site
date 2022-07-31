@@ -9,6 +9,28 @@
   justify-content: center;
   box-shadow: inset 0 -60px 0 -30px #ff6347;
 }
+
+.SkipLinkText {
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  margin: -1px;
+  padding: -1px;
+  overflow: hidden;
+}
+
+.SkipLinkText:focus {
+  color: #2C3531;
+  background-color: #D1E8E2;
+  display: inline-block;
+  height: auto;
+  width: auto;
+  position: static;
+  margin: auto;
+  text-align: center;
+  text-decoration: none;
+}
+
 .buildings {
   height: 84.9673202614379px;
   width: 100%;
