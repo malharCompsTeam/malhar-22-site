@@ -169,6 +169,7 @@
       visibility: hidden;
     }
     .phoneSvg{
+      z-index: 999;
       visibility: visible;
     }
     .container {
