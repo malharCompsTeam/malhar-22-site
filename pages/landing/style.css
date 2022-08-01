@@ -83,7 +83,7 @@
     line-height: 1.2;
     margin-bottom: 20px;
     font-weight: bold;
-    letter-spacing: -0.035em;
+    /* letter-spacing: -0.035em; */
     font-family: 'Clash Grotesk', sans-serif;
     letter-spacing: 0.1vh;
     
