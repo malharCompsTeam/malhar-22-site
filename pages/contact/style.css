@@ -52,6 +52,11 @@ body {
   align-items: center;
 }
 
+a{
+  text-decoration: none;
+  color: #000;
+}
+
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
