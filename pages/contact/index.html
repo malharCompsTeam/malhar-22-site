@@ -31,6 +31,23 @@
       referrerpolicy="no-referrer"
     />
 
+       <!-- Fonts -->
+       <link rel="preconnect" href="https://fonts.googleapis.com" />
+       <link
+         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;500;600;700;800;900&display=swap"
+         rel="stylesheet"
+       />
+       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+       <link
+         href="https://api.fontshare.com/v2/css?f[]=clash-display@400,300&display=swap"
+         rel="stylesheet"
+       />
+       <link
+         href="https://api.fontshare.com/v2/css?f[]=clash-grotesk@200,400,600,300,500&display=swap"
+         rel="stylesheet"
+       />
+   
+
     <!-- Favicon -->
     <link
       rel="shortcut icon"
@@ -42,6 +59,74 @@
   <body>
     <!-- skip  Link  -->
     <a href="#maincontent" class="SkipLinkText">Skip to main Content </a>
+
+     <!-- NAVBAR -->
+     <nav id="nav" class="navbar">
+      <div class="max-width">
+        <ul class="menu">
+          <li>
+            <a href="#" class="menu-btn hover-underline-animation">Home</a>
+          </li>
+          <li>
+            <a
+              href="https://docs.google.com/forms/d/1HORWryDLtUbtUHccHdMSapZStMO0TDmHJx-Z-qz5h30"
+              target="_blank"
+              class="menu-btn hover-underline-animation"
+              >Registration</a
+            >
+          </li>
+          <li>
+            <a href="../../docs/Malhar_2022_Rules_and_Regulations_Manual.pdf" target="_blank" class="menu-btn hover-underline-animation"
+              >Rules & Reg</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://blog.malharfest.in/"
+              target="_blank"
+              class="menu-btn hover-underline-animation"
+              >Blog</a
+            >
+          </li>
+          <!-- <li><a href="#" class="menu-btn">Results</a></li>
+          <li><a href="#" class="menu-btn">Pre-Events</a></li>
+          <li><a href="#" class="menu-btn">Events</a></li>
+          <li><a href="#" class="menu-btn">Conclave</a></li>
+          <li><a href="#" class="menu-btn">Sponsors</a></li>
+          <li><a href="#" class="menu-btn">Taal</a></li>
+          <li><a href="#" class="menu-btn">Art Lounge</a></li>
+          <li><a href="#" class="menu-btn">Workforce</a></li> -->
+          <li>
+            <a href=".././contact/index.html" class="menu-btn hover-underline-animation">Contact</a>
+          </li>
+        </ul>
+        <div class="menu-btn">
+          <svg
+            class="ham hamRotate ham4"
+            viewBox="0 0 100 100"
+            width="80"
+            onclick="this.classList.toggle('active')"
+          >
+            <path
+              class="line top"
+              d="m 70,33 h -40 c 0,0 -8.5,-0.149796 -8.5,8.5 0,8.649796 8.5,8.5 8.5,8.5 h 20 v -20"
+            />
+            <path class="line middle" d="m 70,50 h -40" />
+            <path
+              class="line bottom"
+              d="m 30,67 h 40 c 0,0 8.5,0.149796 8.5,-8.5 0,-8.649796 -8.5,-8.5 -8.5,-8.5 h -20 v 20"
+            />
+          </svg>
+        </div>
+
+        <!-- this may look stupid but do not touch it 
+          (flexbox-related) -->
+        <span class="nav-lol">lol</span>
+      </div>
+    </nav>
+
+
+    
 
     <div class="contact-section">
       <div class="contact-form-container">
@@ -99,14 +184,14 @@
             <input
               type="text"
               name="Name"
-              placeholder="Full name: John Doe"
+              placeholder="Full name"
               required
             />
             <input
               type="email"
               pattern="[A-Za-z\.\@]{2,50}"
               name="Email"
-              placeholder="Email address: john.doe@gmail.com"
+              placeholder="Email address"
               required
             />
             <input
@@ -114,7 +199,7 @@
               name="Contact"
               pattern="[0-9]{10}"
               title="Please enter a valid phone number."
-              placeholder="Contact number: 123-456-7890"
+              placeholder="Contact number"
               required
             />
             <textarea

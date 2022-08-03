@@ -26,6 +26,227 @@
   text-decoration: none;
 }
 
+/* NAVBAR */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* custom scroll bar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* navbar styling */
+.navbar {
+  width: 100%;
+  z-index: 999;
+  /* padding: 20px 0; */
+  font-family: montserrat;
+  transition: all 0.3s ease;
+  margin-top: 3%;
+  margin-bottom: 5%;
+}
+.navbar.sticky {
+  padding: 10px 0;
+  background-color: none;
+}
+.navbar .max-width {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3rem;
+}
+.navbar .menu li {
+  list-style: none;
+  display: inline-block;
+  padding: 0% 1.5%;
+}
+.navbar .menu li a {
+  display: block;
+  color: #fff;
+  font-weight: 600;
+  font-family: 'montserrat',sans-serif;
+  
+  font-size: 1.3rem;
+  /* margin-left: 25px; */
+  transition: color 0.3s ease;
+}
+.navbar .menu li a:hover {
+  color: #ffcb9a;
+}
+.navbar.sticky .menu li a:hover {
+  color: #ffcb9a;
+}
+
+.menu {
+  width: 75rem;
+}
+
+/* menu btn styling */
+.menu-btn {
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  display: none;
+}
+
+.nav-lol {
+  display: none;
+}
+
+/* hover animation */
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #fff1e6;
+}
+
+.hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #ffcb9a;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.hover-underline-animation:hover {
+  color: #ffcb9a;
+}
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+@media (max-width: 1050px) {
+.menu-btn {
+  display: block;
+  z-index: 999;
+}
+.menu-btn i.active:before {
+  content: "\f00d";
+}
+
+.nav-lol {
+  display: block;
+  color: transparent;
+}
+.navbar{
+  background-color: rgba(34, 34, 34, 0);
+}
+
+.menu-btn{
+  margin-top: 4rem;
+}
+.navbar .menu {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  left: -100%;
+  top: 0;
+  background: linear-gradient(to right, #3a7bd5, #4d7e97);
+  text-align: center;
+  padding: 2rem 0;
+  transition: all 0.3s ease;
+}
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.navbar .menu.active {
+  left: 0;
+}
+.navbar .menu li {
+  display: block;
+}
+.navbar .menu li a {
+  display: inline-block;
+  margin: 20px 0;
+  font-size: 25px;
+}
+.navbar .max-width {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.1rem;
+}
+}
+
+@media (min-width: 1051px) {
+.menu {
+  display: flex;
+  justify-content: space-between;
+  width: 75rem;
+  padding: 1rem 0;
+}
+}
+
+/* NAVBAR HAMBURGER BUTTON STYLING */
+
+.ham {
+cursor: pointer;
+-webkit-tap-highlight-color: transparent;
+transition: transform 400ms;
+-moz-user-select: none;
+-webkit-user-select: none;
+-ms-user-select: none;
+user-select: none;
+
+}
+.hamRotate.active {
+transform: rotate(45deg);
+}
+.hamRotate180.active {
+transform: rotate(180deg);
+}
+.line {
+fill: none;
+transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+stroke: #fff;
+stroke-width: 5.5;
+stroke-linecap: round;
+}
+.ham4 .top {
+stroke-dasharray: 40 121;
+}
+.ham4 .bottom {
+stroke-dasharray: 40 121;
+}
+.ham4.active .top {
+stroke-dashoffset: -68px;
+}
+.ham4.active .bottom {
+stroke-dashoffset: -68px;
+}
+
+@media (min-width: 1080px) {
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  width: 75rem;
+}
+}
 body {
   /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab); */
   background: linear-gradient(-45deg, #ffe44e, #ffed8a, #1cb3d1, #8ddaff);
@@ -39,6 +260,7 @@ body {
     #015268
   ); */
   background-size: 400% 400%;
+  overflow-x: hidden;
   animation: gradient 15s ease infinite;
 
   /* background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/38816/image-from-rawpixel-id-2042508-jpeg.jpg"); */
@@ -47,9 +269,7 @@ body {
   position: relative;
   /* background-size: cover; */
   background-repeat: no-repeat;
-  display: grid;
-  justify-items: center;
-  align-items: center;
+
 }
 
 a{
@@ -73,7 +293,7 @@ a{
 .contact-form-container {
   background: #f4f3f3;
   
-  font-family: "Lato", sans-serif;
+  font-family: 'Clash Grotesk', sans-serif;
 }
 
 .contact-us {
@@ -83,14 +303,14 @@ a{
   background: #68b2d4;
   overflow: hidden;
 }
-.contact-us:before {
+/* .contact-us:before {
   position: absolute;
   content: "";
   bottom: -50px;
   left: -100px;
   height: 250px;
   width: 400px;
-  /* background: #f8b7d8; */
+  
   background: #8cecff;
   transform: rotate(25deg);
 }
@@ -101,10 +321,10 @@ a{
   right: -100px;
   height: 270px;
   width: 400px;
-  /* background: #9ed8eb; */
+  
   background: #ffe44e;
   transform: rotate(-25deg);
-}
+} */
 
 /* .contact-header {
   color: white;
@@ -252,7 +472,14 @@ form button {
 }
 
 /* Layout Stuff */
-
+.contact-section{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  left: 50%;
+ 
+}
 .contact-form-container {
   width: 800px;
   display: grid;
@@ -282,12 +509,22 @@ form button {
   grid-area: contact-form;
 }
 
+
+
 /* 
 
 mobile screens viewport
 
 */
 @media only screen and (max-width: 720px) {
+
+  .navbar .menu{
+    z-index: 1000;
+  }
+  .contact-section{
+    display: flex;
+    flex-direction: column;
+  }
   .contact-form-container {
     width: 350px;
     height: 600px;
@@ -318,13 +555,20 @@ mobile screens viewport
     margin-left: 1rem;
   }
 
+  .email{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
   .email h3 {
     text-align: end;
     margin-right: 1rem;
   }
 
   .social-bar-mobile {
-    margin: 2rem 0;
+    margin: 2% 0;
+    display: flex;
+    flex-direction: row;
   }
 
   .social-bar-mobile ul {
@@ -337,6 +581,7 @@ mobile screens viewport
     list-style: none;
     color: white;
     font-size: 3rem;
+    padding: 0% 10%;
   }
 }
 
