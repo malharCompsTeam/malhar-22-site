@@ -59,8 +59,7 @@ html {
   /* padding: 20px 0; */
   font-family: montserrat;
   transition: all 0.3s ease;
-  margin-top: 1%;
-  margin-bottom: 1%;
+  margin: 3vh 0;
 }
 .navbar.sticky {
   padding: 10px 0;
@@ -100,7 +99,7 @@ html {
 
 /* menu btn styling */
 .menu-btn {
-  color: #fff;
+  color: #f9c74f;
   font-size: 2rem;
   cursor: pointer;
   display: none;
@@ -396,6 +395,7 @@ a {
 form {
   position: relative;
   width: 440px;
+  font-family: 'montserrat';
   margin: 2% auto;
   padding: 20px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
@@ -406,6 +406,7 @@ form textarea {
   background: white;
   display: block;
   margin-bottom: 2%;
+  font-family: 'montserrat';
   /* margin: auto auto 5px auto; */
   width: 100%;
   border: 0;
@@ -414,6 +415,7 @@ form input,
 form textarea {
   /* height: 50px; */
   line-height: 40px;
+  font-family: 'montserrat';
   outline: 0;
   border-bottom: 1px solid rgba(68, 68, 68, 0.3);
   font-size: 1rem;
@@ -425,7 +427,7 @@ form textarea {
   outline: none;
 
   font-size: 1rem;
-  font-family: lato;
+  font-family: 'montserrat';
   color: rgba(68, 68, 68, 0.8);
 }
 form button {
@@ -437,16 +439,16 @@ form button {
   border: 0;
   border-radius: 20px;
   bottom: -60px;
-  background: #fff;
-  color: #000;
+  background: #f9c74f;
+  color: #fff;
   font-size: 1.1rem;
   font-weight: 300;
   outline: none;
 }
 
 form button:hover{
-  background-color: #000;
-  color: #fff;
+  background-color: #f9c74f;
+  
   transition: 0.5s;
 }
 
