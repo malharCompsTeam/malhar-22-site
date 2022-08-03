@@ -42,7 +42,7 @@ html {
 }
 .navbar.sticky {
   padding: 10px 0;
-  background: rgba(0, 0, 0, 0.721);
+  background-color: none;
 }
 .navbar .max-width {
   display: flex;
