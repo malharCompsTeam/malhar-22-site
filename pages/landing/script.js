@@ -32,6 +32,7 @@ $(document).ready(function () {
 // PRODUCTION CONTROLS SCRIPT -------
 //-----------------------------------
 
+
 $("#btnFirstFrame").on("click", function(){tlMain.progress(0);});
 $("#btnReverse").on("click", function(){tlMain.reverse();});
 $("#btnPause").on("click", function(){tlMain.pause();});
@@ -89,291 +90,6 @@ function chanceRoll(chance) {
 // PANEL SCRIPT ---------------------
 //-----------------------------------
 
-var open = false;
-
-var body = select("body");
-var panelBackdrop = select(".panelBackdrop");
-var panel = select(".panel");
-var panelRect = select("#panelRect");
-var panelBgSVG = select("#panelBgSVG");
-var panelIconSVG = select("#panelIconSVG");
-var panelIcon = select("#panelIcon");
-var panelIconLine1 = select("#panelIconLine1");
-var panelIconLine2 = select("#panelIconLine2");
-var docWidth;
-var panelWidth;
-var panelHeight = 400;
-var panelMaxSize = 1200;
-var panelPosClosed = -305;
-var panelPosOpen = 0;
-var artWidth = 620;
-var iconWidth = 50;
-var iconPadding = 20;
-var iconPos;
-var iconPosStart = -50;
-var baseDur = 0.4;
-var panelEase = Back.easeOut;
-
-
-// Starting Values
-TweenMax.set(panelIconSVG, { width: iconWidth, bottom: iconPosStart });
-TweenMax.set(panelIconLine1, { drawSVG:"95% 100%", transformOrigin: "center" });
-TweenMax.set(panelIconLine2, { drawSVG:"0% 55%", transformOrigin: "center" });
-TweenMax.set(panel, { bottom: panelPosClosed, left: "50%", xPercent: "-50%", maxWidth: panelMaxSize, transformOrigin: "bottom left" });
-
-// Set panel colors according to vars in template settings
-function setPanelColors() {
-	TweenMax.set("#stop1", { attr:{ "stop-color": upperPanelColor } });
-	TweenMax.set("#stop2", { attr:{ "stop-color": lowerPanelColor } });
-	TweenMax.set(panelIcon, { fill: iconFill, stroke: iconStroke });
-	TweenMax.set(panelRect, { stroke: rectStroke });
-};
-
-// Show panel if showInfoPanel is set to true
-function showPanel() { 
-  if (showInfoPanel) { TweenMax.set(panel, { autoAlpha: 1 }); TweenMax.set(panelIconSVG, { autoAlpha: 1 }); }
-};
-
-// Show panel toggle icon according to timer in template settings
-function revealInfoIcon() {
-	setTimeout(function() {
-		TweenMax.to(panelIconSVG, baseDur, { bottom: iconPadding, ease: panelEase });
-	}, revealInfoButtonAfterSeconds*1000);
-};
-
-// Set panel properties on load and resize
-function setPanelProps() {
-	docWidth = window.innerWidth;
-	if (docWidth > panelMaxSize) {
-		panelWidth = panelMaxSize;
-		iconPos = panelMaxSize - iconWidth;
-	} else {
-		panelWidth = docWidth;
-		iconPos = docWidth - iconWidth - iconPadding;
-	}
-	TweenMax.to(panel, baseDur, { width: panelWidth });
-	TweenMax.to(panelIconSVG, baseDur, { x: iconPos });
-	TweenMax.to(panelBgSVG, baseDur, { width: panelWidth, height: panelHeight, attr:{ viewBox:"0 0 " + panelWidth + " " + panelHeight } });
-	
-	// Center .rockLogo
-	if (panelWidth<640) {
-		TweenMax.to(".rock", 0, { marginLeft: (panelWidth-20-artWidth)/2 });
-	} else {
-		TweenMax.to(".rock", 0, { marginLeft: -150 });
-	}
-}
-window.addEventListener("load", setPanelProps);
-window.addEventListener("resize", setPanelProps);
-
-// Open and Close panel
-
-// HOVER
-panelIconSVG.addEventListener("mouseover", function() {
-	TweenMax.to(panelIconSVG, baseDur, { scale: 1.1, ease: panelEase });
-	if (!open) {
-		TweenMax.to(panel, baseDur, { bottom: panelPosClosed, rotation: -1, ease: panelEase });
-	}
-});
-panelIconSVG.addEventListener("mouseout", function() {
-	TweenMax.to(panelIconSVG, baseDur, { scale: 1, ease: panelEase });
-	if (!open){
-		TweenMax.to(panel, baseDur, { bottom: panelPosClosed, rotation: 0, ease: panelEase });	
-	}
-});
-
-// CLICK
-panelIconSVG.addEventListener("click", function() {
-	if (!open) {
-		openPanel();
-	} else {
-		closePanel();
-	}
-});
-panelBackdrop.addEventListener("click", closePanel);
-
-function openPanel() {
-	TweenMax.to(panel, baseDur, { bottom: panelPosOpen, ease: panelEase });
-	TweenMax.to(panel, baseDur, { bezier: [{rotation: -1},{rotation: -5},{rotation: 0}] });
-	TweenMax.to(panelIconSVG, baseDur, { bottom: iconPadding-panelPosClosed, ease: panelEase, delay: 0.05 });
-	TweenMax.to(panelBackdrop, baseDur, { autoAlpha: 0.5 });
-	TweenMax.set(body, { overflow: "hidden" });
-	animToCloseIcon();
-	open = true;
-}
-
-function closePanel() {
-	TweenMax.to(panel, baseDur, { bottom: panelPosClosed, ease: Back.easeInOut });
-	TweenMax.to(panel, baseDur*2, { bezier: [{rotation: 0},{rotation: 5},{rotation: 0}], ease: Power0.easeNone });
-	TweenMax.to(panelIconSVG, 0.6, { bottom: iconPadding, ease: Back.easeInOut, delay: 0.05 });
-	TweenMax.to(panelBackdrop, baseDur, { autoAlpha: 0 });
-	TweenMax.set(body, { overflow: "visible" });
-	animToInfoIcon();
-	open = false;
-}
-
-function animToInfoIcon() {
-	new TimelineMax()
-		.to(panelIconLine1, 0.2, { rotation: 0 }, 0)
-		.to(panelIconLine2, 0.2, { rotation: 0 }, 0)
-		.add("expand")
-		.to(panelIconLine1, 0.1, { drawSVG:"95% 100%" }, "expand")
-		.to(panelIconLine2, 0.1, { drawSVG:"0% 55%" }, "expand")
-}
-function animToCloseIcon() {
-	new TimelineMax()
-		.to(panelIconLine1, 0.1, { drawSVG:"0% 100%" }, 0)
-		.to(panelIconLine2, 0.1, { drawSVG:"0% 100%" }, 0)
-		.add("expand")
-		.to(panelIconLine1, 0.2, { rotation: 45 }, "expand")
-		.to(panelIconLine2, 0.2, { rotation: -45 }, "expand")
-}
-
-//-----------------------------------
-// END OF PANEL SCRIPT --------------
-//-----------------------------------
-
-//-----------------------------------
-// LOGO ANIMATION SCRIPT ------------
-//-----------------------------------
-
-var logoLeftBrow = select(".logo-eyeL_brow"),
-	logoRightBrow = select(".logo-eyeR_brow"),
-	logoBrows = [logoLeftBrow, logoRightBrow],
-
-	logoTopLids = selectAll(".logoLidTop"),
-	logoBottomLids = selectAll(".logoLidBtm"),
-
-	logoLeftIris = select(".logo-eyeL_iris"),
-	logoRightIris = select(".logo-eyeR_iris"),
-	logoIris = [logoLeftIris, logoRightIris],
-
-	logoLeftPupil = select(".logo-eyeL_pupil"),
-	logoRightPupil = select(".logo-eyeR_pupil");
-	
-window.setInterval(function() {
-	var animDur = random( 0.3, 1.3 )
-	
-	if (chanceRoll(90)){
-		var
-		browsRot = random( -15, 15 ),
-		browsPosY = random( -5, 3 ),
-		irisPosX = random( -11, 43 ),
-		irisScale = random( 1, 1.3 ),
-		pupilScale = random( 0.7, 1.5 ),
-		irisPosY = random( -5, 35 ),
-		topLidsPosY,
-		btmLidsPosY;
-
-		// Avoids covering pupils with lids
-		if (irisPosY < 0) {
-			topLidsPosY = random(-25, -15);
-			btmLidsPosY = random(0, 15);		
-		} else if (irisPosY < 15) {
-			topLidsPosY = random(-25, -10);
-			btmLidsPosY = random(0, 15);
-		} else if (irisPosY > 20) {
-			topLidsPosY = random(-25, 0);
-			btmLidsPosY = random(10, 15);
-		} else {
-			topLidsPosY = random(-25, 0);
-			btmLidsPosY = random(0, 15);		
-		}
-
-		TweenMax.to(logoBrows, animDur, { y: browsPosY, ease: Power2.easeInOut });
-		TweenMax.to(logoLeftBrow, animDur, { rotation: browsRot, transformOrigin: "center" });
-		TweenMax.to(logoRightBrow, animDur, { rotation: -browsRot, transformOrigin: "center" });
-
-		TweenMax.to(logoTopLids, animDur, { y: topLidsPosY });
-		TweenMax.to(logoBottomLids, animDur, { y: btmLidsPosY });
-
-		TweenMax.to(logoIris, animDur, { scale: irisScale, transformOrigin: "center" });
-		TweenMax.to(logoLeftIris, animDur, { x: irisPosX, y: irisPosY, ease: Power4.easeOut });
-		TweenMax.to(logoRightIris, animDur, { x: 32-irisPosX, y: irisPosY, ease: Power4.easeOut });
-
-		TweenMax.to(logoLeftPupil, animDur, { scale: pupilScale, transformOrigin: "center" });
-		TweenMax.to(logoRightPupil, animDur, { scale: pupilScale, transformOrigin: "center" });
-	} else {
-		var irisPosY = random( 5, 35 ),
-			topLidsPosY,
-			btmLidsPosY;
-
-		// Avoids covering pupils with lids
-		if (irisPosY < 0) {
-			topLidsPosY = random(-25, -15);
-			btmLidsPosY = random(0, 15);		
-		} else if (irisPosY < 10) {
-			topLidsPosY = random(-25, -10);
-			btmLidsPosY = random(0, 15);
-		} else if (irisPosY > 30) {
-			topLidsPosY = random(-25, 0);
-			btmLidsPosY = random(10, 15);
-		} else if (irisPosY > 20) {
-			topLidsPosY = random(-25, 0);
-			btmLidsPosY = random(5, 15);
-		} else {
-			topLidsPosY = random(-25, 0);
-			btmLidsPosY = random(0, 15);		
-		}
-
-		TweenMax.to(logoLeftBrow, animDur, { rotation: random( -15, 15 ), y: random( -5, 3 ), transformOrigin: "center" });
-		TweenMax.to(logoRightBrow, animDur, { rotation: -random( -15, 15 ), y: random( -5, 3 ), transformOrigin: "center" });
-
-		TweenMax.to(logoTopLids, animDur, { y: topLidsPosY });
-		TweenMax.to(logoBottomLids, animDur, { y: btmLidsPosY });
-
-		TweenMax.to(logoLeftIris, animDur, { x: random( -11, 43 ), y: irisPosY, scale: random( 1, 1.5 ), transformOrigin: "center" });
-		TweenMax.to(logoRightIris, animDur, { x: random( -11, 43 ), y: irisPosY, scale: random( 1, 1.5 ), transformOrigin: "center" });
-
-		TweenMax.to(logoLeftPupil, animDur, { scale: random( 0.7, 1.9 ), transformOrigin: "center" });
-		TweenMax.to(logoRightPupil, animDur, { scale: random( 0.7, 1.9 ), transformOrigin: "center" });
-	}
-}, 2000);
-
-window.setInterval(function() {
-	TweenMax.to("#logoSign", random( 0.7, 1.5 ), { scale: random( 0.9, 1.1 ), transformOrigin: "center", ease: Power4.easeInOut })
-}, 3200);
-
-window.setInterval(function() {
-	TweenMax.to("#logoSign", random( 0.6, 1.5 ), { y: random( -15, 15 ), ease: Power3.easeInOut })
-}, 1850);
-
-window.setInterval(function() {
-	TweenMax.to("#logoSign", random( 0.5, 0.9 ), { rotation: random( -10, 10 ), transformOrigin: "center", ease: Power2.easeInOut })
-}, 900);
-
-//-----------------------------------
-// END OF LOGO ANIMATION SCRIPT -----
-//-----------------------------------
-
-
-//---------------------------------------
-// TEMPLATE SETTINGS --------------------
-//---------------------------------------
-
-// Show production controls true/false & execute
-var showControls = false;
-showCtrls();
-
-// Use panel true/false & execute
-var showInfoPanel = true;
-showPanel();
-
-// Reveal info buttom after seconds, or use as callback
-var revealInfoButtonAfterSeconds = 4;
-revealInfoIcon();
-
-// Customize panel styles to match pen & execute
-var upperPanelColor = "hsla(0, 0%, 50%, 0.5)",
-	lowerPanelColor = "hsla(0, 0%, 50%, 0.8)",
-	rectStroke = lowerPanelColor,
-	iconFill = upperPanelColor,
-	iconStroke = lowerPanelColor;
-setPanelColors();
-
-
-
-
-// 1 VARIABLES
 var
 
 // 1.1 Elements
@@ -474,3 +190,163 @@ window.addEventListener("resize", function() {
 
 
 tlMain.play().timeScale(2);
+
+var open = false;
+
+var body = select("body");
+var panelBackdrop = select(".panelBackdrop");
+var panel = select(".panel");
+// var panelRect = select("#panelRect");
+// var panelBgSVG = select("#panelBgSVG");
+// var panelIconSVG = select("#panelIconSVG");
+// var panelIcon = select("#panelIcon");
+// var panelIconLine1 = select("#panelIconLine1");
+// var panelIconLine2 = select("#panelIconLine2");
+// var docWidth;
+// var panelWidth;
+var panelHeight = 400;
+var panelMaxSize = 1200;
+var panelPosClosed = -305;
+var panelPosOpen = 0;
+// var artWidth = 620;
+var iconWidth = 50;
+var iconPadding = 20;
+// var iconPos;
+var iconPosStart = -50;
+// var baseDur = 0.4;
+var panelEase = Back.easeOut;
+
+
+// Starting Values
+// TweenMax.set(panelIconSVG, { width: iconWidth, bottom: iconPosStart });
+// TweenMax.set(panelIconLine1, { drawSVG:"95% 100%", transformOrigin: "center" });
+// TweenMax.set(panelIconLine2, { drawSVG:"0% 55%", transformOrigin: "center" });
+// TweenMax.set(panel, { bottom: panelPosClosed, left: "50%", xPercent: "-50%", maxWidth: panelMaxSize, transformOrigin: "bottom left" });
+
+// Set panel colors according to vars in template settings
+function setPanelColors() {
+	TweenMax.set("#stop1", { attr:{ "stop-color": upperPanelColor } });
+	TweenMax.set("#stop2", { attr:{ "stop-color": lowerPanelColor } });
+	TweenMax.set(panelIcon, { fill: iconFill, stroke: iconStroke });
+	TweenMax.set(panelRect, { stroke: rectStroke });
+};
+
+// Show panel if showInfoPanel is set to true
+function showPanel() { 
+  if (showInfoPanel) { TweenMax.set(panel, { autoAlpha: 1 }); TweenMax.set(panelIconSVG, { autoAlpha: 1 }); }
+};
+
+// Show panel toggle icon according to timer in template settings
+function revealInfoIcon() {
+	setTimeout(function() {
+		TweenMax.to(panelIconSVG, baseDur, { bottom: iconPadding, ease: panelEase });
+	}, revealInfoButtonAfterSeconds*1000);
+};
+
+// Set panel properties on load and resize
+function setPanelProps() {
+	docWidth = window.innerWidth;
+	if (docWidth > panelMaxSize) {
+		panelWidth = panelMaxSize;
+		iconPos = panelMaxSize - iconWidth;
+	} else {
+		panelWidth = docWidth;
+		iconPos = docWidth - iconWidth - iconPadding;
+	}
+	TweenMax.to(panel, baseDur, { width: panelWidth });
+	TweenMax.to(panelIconSVG, baseDur, { x: iconPos });
+	TweenMax.to(panelBgSVG, baseDur, { width: panelWidth, height: panelHeight, attr:{ viewBox:"0 0 " + panelWidth + " " + panelHeight } });
+	
+	// Center .rockLogo
+	if (panelWidth<640) {
+		TweenMax.to(".rock", 0, { marginLeft: (panelWidth-20-artWidth)/2 });
+	} else {
+		TweenMax.to(".rock", 0, { marginLeft: -150 });
+	}
+}
+window.addEventListener("load", setPanelProps);
+window.addEventListener("resize", setPanelProps);
+
+// Open and Close panel
+
+// HOVER
+// panelIconSVG.addEventListener("mouseover", function() {
+// 	TweenMax.to(panelIconSVG, baseDur, { scale: 1.1, ease: panelEase });
+// 	if (!open) {
+// 		TweenMax.to(panel, baseDur, { bottom: panelPosClosed, rotation: -1, ease: panelEase });
+// 	}
+// });
+// panelIconSVG.addEventListener("mouseout", function() {
+// 	TweenMax.to(panelIconSVG, baseDur, { scale: 1, ease: panelEase });
+// 	if (!open){
+// 		TweenMax.to(panel, baseDur, { bottom: panelPosClosed, rotation: 0, ease: panelEase });	
+// 	}
+// });
+
+// CLICK
+// panelIconSVG.addEventListener("click", function() {
+// 	if (!open) {
+// 		openPanel();
+// 	} else {
+// 		closePanel();
+// 	}
+// });
+// panelBackdrop.addEventListener("click", closePanel);
+
+// function openPanel() {
+// 	TweenMax.to(panel, baseDur, { bottom: panelPosOpen, ease: panelEase });
+// 	TweenMax.to(panel, baseDur, { bezier: [{rotation: -1},{rotation: -5},{rotation: 0}] });
+// 	TweenMax.to(panelIconSVG, baseDur, { bottom: iconPadding-panelPosClosed, ease: panelEase, delay: 0.05 });
+// 	TweenMax.to(panelBackdrop, baseDur, { autoAlpha: 0.5 });
+// 	TweenMax.set(body, { overflow: "hidden" });
+// 	animToCloseIcon();
+// 	open = true;
+// }
+
+// function closePanel() {
+// 	TweenMax.to(panel, baseDur, { bottom: panelPosClosed, ease: Back.easeInOut });
+// 	TweenMax.to(panel, baseDur*2, { bezier: [{rotation: 0},{rotation: 5},{rotation: 0}], ease: Power0.easeNone });
+// 	TweenMax.to(panelIconSVG, 0.6, { bottom: iconPadding, ease: Back.easeInOut, delay: 0.05 });
+// 	TweenMax.to(panelBackdrop, baseDur, { autoAlpha: 0 });
+// 	TweenMax.set(body, { overflow: "visible" });
+// 	animToInfoIcon();
+// 	open = false;
+// }
+
+// function animToInfoIcon() {
+// 	new TimelineMax()
+// 		.to(panelIconLine1, 0.2, { rotation: 0 }, 0)
+// 		.to(panelIconLine2, 0.2, { rotation: 0 }, 0)
+// 		.add("expand")
+// 		.to(panelIconLine1, 0.1, { drawSVG:"95% 100%" }, "expand")
+// 		.to(panelIconLine2, 0.1, { drawSVG:"0% 55%" }, "expand")
+// }
+// function animToCloseIcon() {
+// 	new TimelineMax()
+// 		.to(panelIconLine1, 0.1, { drawSVG:"0% 100%" }, 0)
+// 		.to(panelIconLine2, 0.1, { drawSVG:"0% 100%" }, 0)
+// 		.add("expand")
+// 		.to(panelIconLine1, 0.2, { rotation: 45 }, "expand")
+// 		.to(panelIconLine2, 0.2, { rotation: -45 }, "expand")
+// }
+
+
+// Show production controls true/false & execute
+// var showControls = false;
+// showCtrls();
+
+// Use panel true/false & execute
+// var showInfoPanel = true;
+// showPanel();
+
+// Reveal info buttom after seconds, or use as callback
+// var revealInfoButtonAfterSeconds = 4;
+// revealInfoIcon();
+
+// Customize panel styles to match pen & execute
+// var upperPanelColor = "hsla(0, 0%, 50%, 0.5)",
+// 	lowerPanelColor = "hsla(0, 0%, 50%, 0.8)",
+// 	rectStroke = lowerPanelColor,
+// 	iconFill = upperPanelColor,
+// 	iconStroke = lowerPanelColor;
+// setPanelColors();
