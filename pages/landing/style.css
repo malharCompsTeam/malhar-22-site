@@ -38,7 +38,7 @@ html {
   background: rgba(34, 34, 34, 0);
   font-family: montserrat;
   transition: all 0.3s ease;
-  margin-top: 3%;
+  margin-top: 3vh;
 }
 .navbar.sticky {
   padding: 10px 0;
@@ -414,7 +414,7 @@ html {
         min-width: 220px;
    }
     .ffLogoBig {
-        margin-top: 50%;
+        margin-top: 12vh;
         height: 25vh;
         width: 25vh;
    }
