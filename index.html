@@ -1333,5 +1333,14 @@
     <script src="https://codepen.io/nerdmanship/pen/YNEggb.js"></script>
     <script src="./script.js"></script>
     <script src="/js/loadnav.js"></script>
+    <script>
+      jQuery(document).ready(function ($) {
+        //Use this inside your document ready jQuery
+        $(window).on("popstate", function () {
+          location.reload(true);
+          console.log("jquery hello");
+        });
+      });
+    </script>
   </body>
 </html>
