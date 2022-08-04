@@ -4,5 +4,6 @@ window.addEventListener( "pageshow", function ( event ) {
       // Handle page restore.
       //alert('refresh');
       window.location.reload();
+      console.log("hello");
     }
   });
