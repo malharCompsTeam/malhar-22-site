@@ -21,6 +21,7 @@
 
     <title>Contact Us</title>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="./style.css" />
     <link
@@ -254,16 +255,16 @@
     <!-- JS -->
     <script src="./script.js"></script>
     <script src="../../js/loadnav.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
 
     <script>
-      jQuery(document).ready(function ($) {
-        //Use this inside your document ready jQuery
-        $(window).on("popstate", function () {
-          location.reload(true);
-          console.log("jquery hello");
-        });
-      });
+      const [entry] = performance.getEntriesByType("navigation");
+
+// Show it in a nice table in the developer console
+console.table(entry.toJSON());
+
+if (entry["type"] === "back_forward")
+    location.reload();
     </script>
   </body>
 </html>
