@@ -1,9 +1,4 @@
-window.addEventListener( "pageshow", function ( event ) {
-    var historyTraversal = event.persisted || ( typeof window.performance != "undefined" && window.performance.navigation.type === 2 );
-    if ( historyTraversal ) {
-      // Handle page restore.
-      //alert('refresh');
-      window.location.reload();
-      console.log("hello");
-    }
-  });
+if(performance.navigation.type == 2){
+  location.reload(true);
+  console.log("hello");
+}
