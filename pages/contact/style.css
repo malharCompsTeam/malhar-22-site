@@ -10,6 +10,14 @@ h2 {
   font-family: "Clash Grotesk", sans-serif;
 }
 
+/* .inactiveLink {
+  pointer-events: none;
+} */
+
+.inactiveLink:hover{
+  color: #F7C64F;
+}
+
 .SkipLinkText {
   position: absolute;
   width: 0px;
@@ -87,10 +95,10 @@ html {
   transition: color 0.3s ease;
 }
 .navbar .menu li a:hover {
-  color: #ffcb9a;
+  color: #F7C64F;
 }
 .navbar.sticky .menu li a:hover {
-  color: #ffcb9a;
+  color: #F7C64F;
 }
 
 .menu {
@@ -395,7 +403,7 @@ a {
 form {
   position: relative;
   width: 440px;
-  font-family: 'montserrat';
+  font-family: "montserrat";
   margin: 2% auto;
   padding: 20px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
@@ -406,7 +414,7 @@ form textarea {
   background: white;
   display: block;
   margin-bottom: 2%;
-  font-family: 'montserrat';
+  font-family: "montserrat";
   /* margin: auto auto 5px auto; */
   width: 100%;
   border: 0;
@@ -415,7 +423,7 @@ form input,
 form textarea {
   /* height: 50px; */
   line-height: 40px;
-  font-family: 'montserrat';
+  font-family: "montserrat";
   outline: 0;
   border-bottom: 1px solid rgba(68, 68, 68, 0.3);
   font-size: 1rem;
@@ -427,7 +435,7 @@ form textarea {
   outline: none;
 
   font-size: 1rem;
-  font-family: 'montserrat';
+  font-family: "montserrat";
   color: rgba(68, 68, 68, 0.8);
 }
 form button {
@@ -440,15 +448,16 @@ form button {
   border-radius: 20px;
   bottom: -60px;
   background: #f9c74f;
+
   color: #fff;
   font-size: 1.1rem;
   font-weight: 300;
   outline: none;
 }
 
-form button:hover{
-  background-color: #f9c74f;
-  
+form button:hover {
+  background-color: #fee451;
+color: #000;
   transition: 0.5s;
 }
 
