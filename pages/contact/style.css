@@ -10,8 +10,12 @@ h2 {
   font-family: "Clash Grotesk", sans-serif;
 }
 
-.inactiveLink {
+/* .inactiveLink {
   pointer-events: none;
+} */
+
+.inactiveLink:hover{
+  color: #F7C64F;
 }
 
 .SkipLinkText {
@@ -91,10 +95,10 @@ html {
   transition: color 0.3s ease;
 }
 .navbar .menu li a:hover {
-  color: #ffcb9a;
+  color: #F7C64F;
 }
 .navbar.sticky .menu li a:hover {
-  color: #ffcb9a;
+  color: #F7C64F;
 }
 
 .menu {
@@ -444,6 +448,7 @@ form button {
   border-radius: 20px;
   bottom: -60px;
   background: #f9c74f;
+
   color: #fff;
   font-size: 1.1rem;
   font-weight: 300;
@@ -451,8 +456,8 @@ form button {
 }
 
 form button:hover {
-  background-color: #f9c74f;
-
+  background-color: #fee451;
+color: #000;
   transition: 0.5s;
 }
 

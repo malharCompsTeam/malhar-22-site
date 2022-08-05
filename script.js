@@ -22,6 +22,11 @@ $(document).ready(function () {
 	  $(".navbar .menu").toggleClass("active");
 	  $(".menu-btn i").toggleClass("active");
 	});
+
+	$(".close_nav").click(function () {
+		$(".navbar .menu").removeClass("active");
+		$(".ham").removeClass("active");
+	  });
   });
 
   setTimeout(function () {
