@@ -514,6 +514,8 @@ mobile screens viewport
   .contact-section {
     display: flex;
     flex-direction: column;
+    margin-bottom: 20%;
+    padding-bottom: 5%;
   }
   .contact-form-container {
     width: 350px;
