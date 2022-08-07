@@ -427,7 +427,7 @@ form textarea {
   outline: 0;
   border-bottom: 1px solid rgba(68, 68, 68, 0.3);
   font-size: 1rem;
-  color: rgba(68, 68, 68, 0.8);
+  color: rgba(0, 0, 0, 0.9);
 }
 form textarea {
   border-bottom: 1px solid rgba(68, 68, 68, 0.3);
