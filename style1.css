@@ -277,7 +277,7 @@ html {
 
 .ffLogoBig,
 .main-content {
-  margin-top: 15vh;
+  margin-top: 12vh;
 }
 .container header {
   opacity: 0;
@@ -415,8 +415,8 @@ html {
   }
   .ffLogoBig {
     margin-top: 12vh;
-    height: 23vh;
-    width: 23vh;
+    height: 21vh;
+    width: 21vh;
   }
   .main-content h1 {
     font-size: 2rem;
