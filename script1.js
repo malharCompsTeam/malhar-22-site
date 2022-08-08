@@ -26,8 +26,8 @@ $(document).ready(function () {
   $(".close_nav").click(function () {
     $(".navbar .menu").removeClass("active");
     $(".ham").removeClass("active");
-    console.log("executed close");
-	window.location.reload();
+    // console.log("executed close");
+	// window.location.reload();
 
   });
 });
