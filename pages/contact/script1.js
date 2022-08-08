@@ -36,5 +36,6 @@ $(document).ready(function () {
 	$(".close_nav").click(function () {
 		$(".navbar .menu").removeClass("active");
 		$(".ham").removeClass("active");
+		window.location.reload();
 	  });
   });

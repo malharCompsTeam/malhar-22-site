@@ -27,6 +27,8 @@ $(document).ready(function () {
     $(".navbar .menu").removeClass("active");
     $(".ham").removeClass("active");
     console.log("executed close");
+	window.location.reload();
+
   });
 });
 

@@ -7,3 +7,11 @@ window.addEventListener( "pageshow", function ( event ) {
       window.location.reload();
     }
   })
+
+
+  $(document).ready(function () {
+    $(".close_nav").click(function () {
+      $(".navbar .menu").removeClass("active");
+      $(".ham").removeClass("active");
+      });
+  });
