@@ -312,7 +312,8 @@ a {
   position: relative;
   /* width: 250px; */
   /* background: #c3e0ec; */
-  background: #f9c74f;
+  /* background: #f9c74f; */
+  background: #b375d2;
   overflow: hidden;
 }
 
@@ -447,17 +448,21 @@ form button {
   border: 0;
   border-radius: 20px;
   bottom: -60px;
-  background: #f9c74f;
+  /* background: #f9c74f; */
+  background: #9968C5;
 
-  color: #fff;
+  border-radius: 20px;
+
+  color: white;
   font-size: 1.1rem;
   font-weight: 300;
   outline: none;
 }
 
 form button:hover {
-  background-color: #fee451;
-color: #000;
+  /* background-color: #fee451; */
+  background-color: #B375D2;
+color: white;
   transition: 0.5s;
 }
 
