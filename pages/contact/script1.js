@@ -1,3 +1,5 @@
+console.log("change made at 8:15 pm");
+
 const scriptURL = "https://script.google.com/macros/s/AKfycbzCu5pdeYEedozyD-cYMoISTxoPlaSUg97lzV3rVzByrffJGoQbfnAddZDIbFvsWRzA/exec";
 const form = document.forms["google-sheet"];
 
