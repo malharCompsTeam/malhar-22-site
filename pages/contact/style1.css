@@ -391,7 +391,7 @@ a {
 
 .address i,
 .email i {
-  color: #f8b7d8;
+  /* color: #f8b7d8; */
   font-size: 1.7rem;
   /* margin-bottom: 20px; */
 }
