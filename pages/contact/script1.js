@@ -1,4 +1,4 @@
-console.log("change made at 8:15 pm");
+console.log("change made at 12 am 13th aug");
 
 const scriptURL = "https://script.google.com/macros/s/AKfycbzCu5pdeYEedozyD-cYMoISTxoPlaSUg97lzV3rVzByrffJGoQbfnAddZDIbFvsWRzA/exec";
 const form = document.forms["google-sheet"];
