@@ -49,7 +49,7 @@
     display: block;
     color: #fff;
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 600;
     /* margin-left: 25px; */
     transition: color 0.3s ease;
   }
@@ -246,8 +246,8 @@
   }
 
   iframe{
-  width: 40rem;
-  height: 20rem;
+  width: 50rem;
+  height: 30rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -266,7 +266,7 @@
 
   .conclaves-title {
     text-align: center;
-    font-size: 4.5rem;
+    font-size: 5.5rem;
     margin-top: 7rem;
     z-index: -2;
     font-weight: 450;
@@ -276,13 +276,13 @@
   .keynote{
     text-align: center;
     margin-top: 5.5rem;
-    font-size: 2rem;
+    font-size: 3.5rem;
     font-weight: 400;
   }
 
   .general,.interactive,.panel,.performance{
     text-align: center;
-    font-size: 2rem;
+    font-size: 3.5rem;
     font-weight: 400;
     margin-top: 5rem;
   }
