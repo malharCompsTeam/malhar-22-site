@@ -394,6 +394,8 @@ h2 {
   color: black;
   text-align: left;
 
+  font-family: 'Clash Grotesk';
+  font-size: 1.5rem;
   overflow-wrap: break-word;
   text-overflow: ellipsis;
   white-space: break-spaces;
