@@ -436,6 +436,16 @@
     .card_description {
       margin-top: 1rem;
     }
+
+    .mobile_display{
+      visibility: hidden;
+      display: none;
+    }
+
+    .laptop_display{
+      visibility: visible;
+      display: block;
+    }
   }
 
   /* for shitty old smartphones with shitty small screens */
@@ -469,12 +479,12 @@
   }
 
   /* for normal chad smartphones */
-  @media screen and (min-width: 375px) and (max-width: 768px) {
+  @media screen and (min-width: 340px) and (max-width: 768px) {
     .card {
       width: 21rem;
     }
     .card1 {
-      height: 38.5rem;
+      height: 39.5rem;
     }
     .card2 {
       height: 51rem;
@@ -519,7 +529,7 @@
     }
 
     .card1 .card_content h3{
-      font-size: 0.73rem;
+      font-size: 1rem;
     }
     .card3 .card_content h3{
       font-size: 0.97rem;
@@ -531,6 +541,15 @@
     iframe{
       width: 22rem;
       height: 15rem;
+    }
+
+    .mobile_display h3{
+      visibility: visible;
+      display: block;
+    }
+    .laptop_display{
+      visibility: hidden;
+      display: none;
     }
   }
 
