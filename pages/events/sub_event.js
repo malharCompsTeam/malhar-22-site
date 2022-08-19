@@ -151,4 +151,3 @@ function expandItem6() {
 //     canvas3.classList.remove('expanded');
 //     textContent3.classList.remove('text-expand');
 //   }
-

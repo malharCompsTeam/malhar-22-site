@@ -394,6 +394,8 @@ h2 {
   color: black;
   text-align: left;
 
+  font-family: 'Clash Grotesk';
+  font-size: 1.5rem;
   overflow-wrap: break-word;
   text-overflow: ellipsis;
   white-space: break-spaces;
@@ -419,14 +421,7 @@ h2 {
 }
 
 .expand_after {
-  line-height: 135%;
-  border-radius: 1rem;
-  padding: 0.5rem;
-  background-color: white;
-  color: white;
-  position: absolute;
-  bottom: 0.25in;
-  left: 0.5in;
+  display: none;
 }
 
 .card-item1_canvas {
