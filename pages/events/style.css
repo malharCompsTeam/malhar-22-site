@@ -363,4 +363,38 @@
   }
   
   /*  */
+
+  .for_more_info-section {
+    width: 100%;
+    text-align: center;
+    margin-top: 6rem;
+  }
   
+  .for_more_info-section button {
+    background-color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    transition: 0.5s;
+  }
+  
+  .for_more_info-section button:hover {
+    background-color: #2199e8;
+    color: #fff;
+    transition: 0.5s;
+  }
+
+  .for_more_info-section h1{
+    font-size: 3rem;
+    font-weight: 400;
+    font-family: clash grotesk;
+  }
+  
+  .events-title {
+    text-align: center;
+    font-size: 5.5rem;
+    margin-top: 7rem;
+    /* z-index: -2; */
+    font-weight: 450;
+    font-family: clash grotesk;
+    color: #000000;
+  }
