@@ -10,7 +10,11 @@
     align-items: center;
     flex-wrap: wrap;
     min-height: 100vh;
-    background: #9381ff;
+ 
+    /* background-image: linear-gradient(45deg,rgb(171, 59, 173) 60%, #9381ff 50%); */
+    background-image: linear-gradient(45deg,#0E518D 60%, #052E70 50%);
+
+
   }
   
   body .container {
@@ -46,7 +50,7 @@
   body .container .card:nth-child(4) .box .content a,
   body .container .card:nth-child(5) .box .content a,
   body .container .card:nth-child(6) .box .content a {
-    background: #e91e63;
+    background: #ffe44e;
   }
   
   body .container .card .box {
@@ -93,7 +97,7 @@
   }
   
   body .container .card .box .content h3 {
-    font-size: 1.8rem;
+    font-size: 2rem;
     color: rgb(0, 0, 0);
     z-index: 1;
     transition: 0.5s;
@@ -120,7 +124,7 @@
     background: black;
     border-radius: 5px;
     text-decoration: none;
-    color: white;
+    color: black;
     margin-top: 20px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     transition: 0.5s;
@@ -191,6 +195,7 @@
   .menu {
     width: 75rem;
   }
+
   
   /* menu btn styling */
   .menu-btn {
@@ -367,7 +372,7 @@
   .for_more_info-section {
     width: 100%;
     text-align: center;
-    margin-top: 6rem;
+    margin-top: 2vh;
   }
   
   .for_more_info-section button {
@@ -384,9 +389,10 @@
   }
 
   .for_more_info-section h1{
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: 400;
     font-family: clash grotesk;
+    margin-bottom: 5vh;
   }
   
   .events-title {
@@ -396,5 +402,5 @@
     /* z-index: -2; */
     font-weight: 450;
     font-family: clash grotesk;
-    color: #000000;
+    color: white;
   }
