@@ -35,3 +35,4 @@ $(document).ready(function () {
     document.querySelector(".navbar").style.visibility = "visible";
   }, 5000);
   
+

@@ -24,7 +24,7 @@
   text-decoration: none;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
@@ -136,7 +136,7 @@ a{
     background-color: rgba(34, 34, 34, 0);
   }
 
-  .navbar .max-width{
+  .navbar .max-width {
     height: 4.5rem;
   }
 
@@ -186,7 +186,7 @@ a{
     padding: 1rem 0;
   }
 
-  .navbar{
+  .navbar {
     padding-top: 3vh;
   }
 }
@@ -262,8 +262,9 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   flex-direction: row;
-  margin-top: 6rem;
+  margin-top: 2rem;
 }
+
 
 .container-card1 {
   position: relative;
@@ -394,6 +395,9 @@ h2 {
   color: black;
   text-align: left;
 
+  font-family: "Clash Grotesk";
+  font-size: 1.5rem;
+  font-weight: 500;
   overflow-wrap: break-word;
   text-overflow: ellipsis;
   white-space: break-spaces;
@@ -411,9 +415,14 @@ h2 {
   border-radius: 1rem;
   padding: 0.5rem;
   background-color: rgb(103, 103, 222);
+  color: white;
   position: absolute;
   bottom: 0.25in;
-  left: 0.5in;
+  /* left: 4rem; */
+
+  /* margin-left: auto;
+  margin-right: auto;
+  text-align: center; */
 
   box-shadow: 3px 3px 10px 2px rgba(0, 0, 0, 0.2);
 }
@@ -427,9 +436,16 @@ h2 {
   position: absolute;
   bottom: 0.25in;
   left: 0.5in;
+  /*  */
+  display: none;
 }
 
-.card-item1_canvas {
+.card-item1_canvas,
+.card-item2_canvas,
+.card-item3_canvas,
+.card-item4_canvas,
+.card-item5_canvas,
+.card-item6_canvas {
   width: 3in;
   background: #fff;
   border-radius: 1rem;
@@ -437,7 +453,7 @@ h2 {
   padding: 1rem 2rem 2rem;
   position: relative;
   /* background: url('/images/card_bg.jpg'); */
-  height: 2.7in;
+  height: 2.9in;
   overflow: hidden;
   display: box;
   -webkit-box-orient: vertical;
@@ -446,14 +462,14 @@ h2 {
   cursor: pointer;
 }
 
-.card-item2_canvas {
+/* .card-item2_canvas {
   width: 3in;
   background: #fff;
   border-radius: 1rem;
   box-shadow: 3px 3px 10px 2px rgba(0, 0, 0, 0.2);
   padding: 1rem 2rem 2rem;
   position: relative;
-  /* background: url('/images/card_bg.jpg') center; */
+  background: url('/images/card_bg.jpg') center;
   z-index: 10;
   height: 2.7in;
   overflow: hidden;
@@ -462,7 +478,7 @@ h2 {
   -webkit-line-clamp: 3;
 
   cursor: pointer;
-}
+} */
 
 .layer {
   background-color: rgba(0, 0, 0, 0.4);
@@ -478,14 +494,14 @@ h2 {
     -webkit-line-clamp: 3; */
 }
 
-.card-item3_canvas {
+/* .card-item3_canvas {
   width: 3in;
   background: #fff;
   border-radius: 1rem;
   box-shadow: 3px 3px 10px 2px rgba(0, 0, 0, 0.2);
   padding: 1rem 2rem 2rem;
   position: relative;
-  /* background: url('/images/aurora_1.jpeg') center; */
+  background: url('/images/aurora_1.jpeg') center;
 
   height: 2.7in;
   overflow: hidden;
@@ -494,16 +510,16 @@ h2 {
   -webkit-line-clamp: 3;
 
   cursor: pointer;
-}
+} */
 
-.card-item4_canvas {
+/* .card-item4_canvas {
   width: 3in;
   background: #fff;
   border-radius: 1rem;
   box-shadow: 3px 3px 10px 2px rgba(0, 0, 0, 0.2);
   padding: 1rem 2rem 2rem;
   position: relative;
-  /* background: url('/images/card_bg_2.jpg') center; */
+  background: url('/images/card_bg_2.jpg') center;
   height: 2.7in;
   overflow: hidden;
   display: box;
@@ -511,16 +527,16 @@ h2 {
   -webkit-line-clamp: 3;
 
   cursor: pointer;
-}
+} */
 
-.card-item5_canvas {
+/* .card-item5_canvas {
   width: 3in;
   background: #fff;
   border-radius: 1rem;
   box-shadow: 3px 3px 10px 2px rgba(0, 0, 0, 0.2);
   padding: 1rem 2rem 2rem;
   position: relative;
-  /* background: url('/images/card_bg_3  .jpg') center; */
+  background: url('/images/card_bg_3  .jpg') center;
   height: 2.7in;
   overflow: hidden;
   display: box;
@@ -528,16 +544,16 @@ h2 {
   -webkit-line-clamp: 3;
 
   cursor: pointer;
-}
+} */
 
-.card-item6_canvas {
+/* .card-item6_canvas {
   width: 3in;
   background: #fff;
   border-radius: 1rem;
   box-shadow: 3px 3px 10px 2px rgba(0, 0, 0, 0.2);
   padding: 1rem 2rem 2rem;
   position: relative;
-  /* background: url('/images/card_bg.jpg') center; */
+  background: url('/images/card_bg.jpg') center;
   height: 2.7in;
   overflow: hidden;
   display: box;
@@ -545,17 +561,18 @@ h2 {
   -webkit-line-clamp: 3;
 
   cursor: pointer;
-}
+} */
+
 
 .expanded {
-  height: 5in;
+  height: 5.3in;
   width: 4in;
 }
 
 p {
   margin: 0;
   height: 5.5rem;
-  line-height: 135%;
+  line-height: 130%;
 
   overflow: hidden;
   text-overflow: ellipsis;
@@ -564,4 +581,46 @@ p {
 
 .text-expand {
   height: 100%;
+}
+
+/* ================================ */
+.sub-events-title,
+.sub-events-subtitle {
+  text-align: center;
+  color: #fff;
+  font-family: "Clash grotesk";
+  font-weight: 500;
+}
+
+.sub-events-title {
+  margin-top: 9rem;
+}
+
+.sub-events-subtitle{
+  margin-top: 1rem;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+.event-card-info-spans {
+  font-weight: 600;
+}
+
+.for_more_info-section {
+  width: 100%;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.for_more_info-section button {
+  background-color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  transition: 0.5s;
+}
+
+.for_more_info-section button:hover {
+  background-color: #2199e8;
+  color: #fff;
+  transition: 0.5s;
 }
