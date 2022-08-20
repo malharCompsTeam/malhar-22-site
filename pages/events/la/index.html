@@ -88,12 +88,31 @@
     <!-- skip  Link  -->
     <a href="#maincontent" class="SkipLinkText">Skip to main Content </a>
 
-    <!-- NAVBAR -->
-    <nav id="nav" class="navbar">
+    <style>
+      .card-item1_canvas.expanded {
+        height: 6in;
+      }
+      .card-item2_canvas.expanded {
+        height: 5.5in;
+      }
+      /* .card-item1_canvas,
+      .card-item2_canvas,
+      .card-item3_canvas,
+      .card-item4_canvas,
+      .card-item5_canvas,
+      .card-item6_canvas {
+        width: 3.5in;
+      }
+     */
+    </style>
+
+   <div class="test">
+     <!-- NAVBAR -->
+     <nav id="nav" class="navbar">
       <div class="max-width">
         <ul class="menu" style="margin-top: 0px">
           <li>
-            <a href="" class="menu-btn hover-underline-animation close_nav"
+            <a href="../../../index.html" class="menu-btn hover-underline-animation close_nav"
               >Home</a
             >
           </li>
@@ -105,19 +124,18 @@
               >Announcements</a
             >
           </li>
-
           <li>
             <a
-              href="https://drive.google.com/file/d/1mMwoC94IzKRUNAoG8V3FjO_sAhqrGPdB/view?usp=sharing"
+              href="../index.html"
               class="menu-btn hover-underline-animation close_nav"
-              >Schedule</a
+              >Events</a
             >
           </li>
           <li>
             <a
-              href="https://drive.google.com/file/d/10yYi_htw2XyZaHSLIfVtUFDfl3V4ckU5/view?usp=sharing"
+              href="../../conclave/index.html"
               class="menu-btn hover-underline-animation close_nav"
-              >Rules & Regulations</a
+              >Conclave</a
             >
           </li>
           <li>
@@ -127,17 +145,9 @@
               >Blog</a
             >
           </li>
-          <!-- <li><a href="#" class="menu-btn">Results</a></li>
-            <li><a href="#" class="menu-btn">Pre-Events</a></li>
-            <li><a href="#" class="menu-btn">Events</a></li>
-            <li><a href="#" class="menu-btn">Conclave</a></li>
-            <li><a href="#" class="menu-btn">Sponsors</a></li>
-            <li><a href="#" class="menu-btn">Taal</a></li>
-            <li><a href="#" class="menu-btn">Art Lounge</a></li>
-            <li><a href="#" class="menu-btn">Workforce</a></li> -->
           <li>
             <a
-              href="./pages/contact"
+              href="../../contact/index.html"
               class="menu-btn hover-underline-animation close_nav"
               >Contact</a
             >
@@ -163,24 +173,24 @@
         </div>
 
         <!-- this may look stupid but do not touch it 
-            (flexbox-related) -->
+        (flexbox-related) -->
         <span class="nav-lol">ignore </span>
       </div>
     </nav>
 
-    <style>
-      .card-item1_canvas.expanded {
-        height: 6in;
-      }
-      .card-item2_canvas.expanded {
-        height: 5.5in;
-      }
-    </style>
+    <!--  -->
+    <!--  -->
+    <!--  -->
+    <!--  -->
+    <!--  -->
 
+   
     <h1 class="sub-events-title">Literary Arts</h1>
+    <!-- style="padding-left: 10rem; padding-right: 10rem" -->
 
-    <div class="cardholder" style="padding-left: 10rem; padding-right: 10rem">
-      <div class="container-card1" role="region" aria-label="Con-verse with us">
+    <div class="cardholder" >
+      <div class="sub_cards">
+      <div class="container-card1">
         <div class="card-item1_canvas">
           <h2 id="h1">Con-verse with us</h2>
           <p id="p1">
@@ -193,7 +203,7 @@
             <!--  -->
 
             <span class="event-card-info-spans">No. of participants:</span>
-            4-6 participants per team <br /><br />
+            1 per team <br /><br />
 
             <!--  -->
 
@@ -221,7 +231,7 @@
                 left: -50%;
                 width: 15rem;
                 text-align: center;
-              " aria-label="click to expand converse with us"
+              "
             >
               Click here to expand
             </div>
@@ -229,9 +239,9 @@
         </div>
       </div>
 
-      <div class="container-card2" role="region" aria-label="let's get quizzical">
+      <div class="container-card2">
         <div class="card-item2_thumbnail">
-          <img src="../star.png" alt="Flagship Event" />
+          <img src="../star.png" alt="Gucci Gang" />
         </div>
         <div class="card-item2_canvas">
           <h2 id="h2">Let's Get Quizzical</h2>
@@ -274,15 +284,18 @@
                 left: -50%;
                 width: 15rem;
                 text-align: center;
-              " aria-label="click to expand let's get quizzical"
+              "
             >
               Click here to expand
             </div>
           </div>
         </div>
       </div>
+      </div>
 
-      <div class="container-card3" role="region" aria-label="word size matter">
+
+<div class="sub_cards" >
+      <div class="container-card3">
         <div class="card-item3_canvas">
           <h2 id="h2">(Word) Size Matters</h2>
           <p id="p3">
@@ -318,7 +331,7 @@
                 left: -50%;
                 width: 15rem;
                 text-align: center;
-              " aria-label="click to expand word size matters"
+              "
             >
               Click here to expand
             </div>
@@ -327,7 +340,7 @@
       </div>
 
 
-      <div class="container-card4" role="region" aria-label="the jimmy jam games">
+      <div class="container-card4">
         <div class="card-item4_canvas">
           <h2>The Jimmy J.A.M. Games</h2>
           <p id="p4">
@@ -349,7 +362,7 @@
 
             <span class="event-card-info-spans">Time Duration:</span> <br>
             3 hours <br />
-            Speaking Time - 1min <br /><br>
+            <!-- Speaking Time - 1min <br /><br> -->
 
             <!--  -->
 
@@ -363,28 +376,13 @@
                 left: -50%;
                 width: 15rem;
                 text-align: center;
-              " aria-label="click to expand The jimmy JAM games"
+              "
             >
               Click here to expand
             </div>
           </div>
         </div>
       </div>
-
-      <!-- <div class="container-card5">
-      <div class="card-item5_canvas">
-        
-        <h2 >Book Lounge</h2>
-          <p id="p5">No. Of participants: <br>
-            Open to: Contingents and PRNC (Not outstation) <br>
-            Time Duration:  <br>
-                           Performance Time -  <br>
-            Location:  <br>
-        </p>
-        <br>
-        <div class="expand5"> Click here to expand</div>
-      </div>
-    </div> -->
     </div>
 
     
@@ -394,9 +392,10 @@
     <div class="for_more_info-section">
       <h1 class="sub-events-subtitle">Rules and Regulations</h1>
       <a href="https://drive.google.com/file/d/10yYi_htw2XyZaHSLIfVtUFDfl3V4ckU5/view" target="_blank">
-        <button aria-label="check RnR"> For more info check RnR</button>
+        <button>For more info check RnR</button>
       </a>
     </div>
+   </div>
 
 
     <script src="../sub_event.js"></script>
