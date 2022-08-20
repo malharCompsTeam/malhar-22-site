@@ -176,6 +176,12 @@ a {
     justify-content: space-between;
     padding: 0.1rem;
   }
+
+  /*  */
+
+  .expanded{
+    width: 3.5in;
+  }
 }
 
 @media (min-width: 1051px) {
@@ -244,7 +250,9 @@ a {
 body {
   height: 100vh;
   overflow-x: hidden;
-  background: #7692d8;
+  /* background-image:
+radial-gradient(at 0% 20%, #052E70 0px, transparent 50%),
+radial-gradient(at 100% 20%, #1fddff 0px, transparent 50%); */
   display: grid;
   /* align-content: sta; */
   justify-content: center;
@@ -277,12 +285,11 @@ body {
 
 
 .test{
-  background-image:
-radial-gradient(at 40% 20%, #052E70 0px, transparent 50%),
-radial-gradient(at 80% 0%, #1fddff 0px, transparent 50%),
-radial-gradient(at 0% 50%, #0077b6 0px, transparent 50%),
+  background: linear-gradient(#00b4d8,#0077b6,#1daec5);
+  
+/* radial-gradient(at 0% 50%, #0077b6 0px, transparent 50%),
 radial-gradient(at 80% 50%, #00b4d8 0px, transparent 50%),
-radial-gradient(at 80% 100%, #1daec5 0px, transparent 50%);
+radial-gradient(at 80% 100%, #1daec5 0px, transparent 50%); */
 /* radial-gradient(at 0% 0%, hsla(343,100%,76%,1) 0px, transparent 50%); */
 width: 100vw;
 }
@@ -446,8 +453,8 @@ h2 {
 }
 
 .expanded {
-  height: 5.3in;
-  width: 4in;
+  height: 35rem;
+  width: 20rem;
 }
 
 p {
@@ -501,7 +508,7 @@ p {
 }
 
 .for_more_info-section button:hover {
-  background-color: #2199e8;
+  background-color: rgb(38, 44, 135);
   color: #fff;
   transition: 0.5s;
 }
