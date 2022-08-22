@@ -182,6 +182,10 @@ a {
   .expanded{
     width: 3.5in;
   }
+
+  .sub-events-title{
+    font-size: 2.5rem;
+  }
 }
 
 @media (min-width: 1051px) {
@@ -505,6 +509,12 @@ p {
   padding: 1rem 2rem;
   border-radius: 0.5rem;
   transition: 0.5s;
+  font-family: clash grotesk;
+}
+
+.for_more_info-section h1{
+  font-size: 2rem;
+  font-weight: 500;
 }
 
 .for_more_info-section button:hover {
