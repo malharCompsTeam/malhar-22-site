@@ -140,8 +140,8 @@
   
   @media only screen and (max-width: 1050px) {
     body .container .card {
-      min-width: 320px;
-      height: 440px;
+      min-width: 22rem;
+      height: 45rem;
     }
   }
   
@@ -224,7 +224,7 @@
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #ff0;
+    background-color: #ffcb9a;
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
   }
@@ -380,6 +380,7 @@
     padding: 1rem 2rem;
     border-radius: 0.5rem;
     transition: 0.5s;
+    font-family: clash grotesk;
   }
   
   .for_more_info-section button:hover {
