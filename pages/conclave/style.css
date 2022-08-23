@@ -293,7 +293,7 @@ img {
 .card {
   background-color: floralwhite;
   /* position: absolute; */
-  width: 45.5rem;
+  width: 45rem;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -504,7 +504,7 @@ img {
     margin-bottom: 2%;
   }
   .card {
-    width: 21rem;
+    width: 22rem;
   }
   .card1 {
     height: 42rem;
