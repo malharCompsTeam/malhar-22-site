@@ -1,44 +1,43 @@
 const networkingPeople = [
   {
-    img: "./images/waifu1.jpg",
+    img: "./images/networking.webp",
     name: "Networking",
-    job: "product manager",
-    text: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem quoeius recusandae officia voluptas sint deserunt dicta nihil nam omnis? `,
+    text: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium
+    obcaecati velit, magni quam aliquam tempora ad, ducimus incidunt
+    delectus adipisci nihil dolore natus eveniet eligendi. Numquam iusto
+    consectetur repellendus aut distinctio, saepe aliquam ducimus,
+    cupiditate illum dolorem delectus, voluptatum perferendis consequatur
+    asperiores esse. Aperiam velit dolorum deserunt numquam, accusantium
+    quis officiis aut? Repudiandae asperiores, officiis nisi, nesciunt`,
   },
   {
-    img: "./images/waifu2.jpeg",
+    img: "./images/comps.png",
     name: "Computers",
-    job: "developer",
     text: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem quoeius recusandae officia voluptas sint deserunt dicta nihil nam omnis?`,
   },
   {
-    img: "./images/waifu3.jpeg",
+    img: "./images/conclave.png",
     name: "Conclave",
-    job: "designer",
     text: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem quoeius recusandae officia voluptas sint deserunt dicta nihil nam omnis?`,
   },
   {
-    img: "./images/waifu4.jpeg",
+    img: "./images/creatives.png",
     name: "Creatives",
-    job: "designer",
     text: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem quoeius recusandae officia voluptas sint deserunt dicta nihil nam omnis?`,
   },
   {
-    img: "./images/waifu5.jpeg",
+    img: "./images/pr.png",
     name: "Public Relations",
-    job: "designer",
     text: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem quoeius recusandae officia voluptas sint deserunt dicta nihil nam omnis?`,
   },
   {
-    img: "./images/waifu6.jpeg",
+    img: "./images/dNm.png",
     name: "Decor & Merchandise",
-    job: "designer",
     text: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem quoeius recusandae officia voluptas sint deserunt dicta nihil nam omnis?`,
   },
   {
-    img: "./images/waifu7.jpeg",
+    img: "./images/filmNdoc.png",
     name: "Filming & Documentation",
-    job: "designer",
     text: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem quoeius recusandae officia voluptas sint deserunt dicta nihil nam omnis?`,
   },
 ];
