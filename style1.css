@@ -184,6 +184,12 @@ html {
     width: 75rem;
     padding: 1rem 0;
   }
+  .for_more_info-section {
+    margin-top: -5.5rem;
+  }
+  .for_more_info-section a {
+    font-size: 1.2rem;
+  }
 }
 
 /* NAVBAR HAMBURGER BUTTON STYLING */
@@ -438,4 +444,26 @@ html {
 }
 .info a {
   font-weight: bold;
+}
+
+.for_more_info-section {
+  width: 100%;
+  text-align: center;
+  padding: 7rem 0;
+}
+
+.for_more_info-section button {
+  background-color: #fff;
+  padding: 1rem 3rem;
+  border: solid 1.5px black;
+  border-radius: 0.5rem;
+  transition: 0.5s;
+  font-family: montserrat, clash grotesk, sans-serif;
+}
+
+
+.for_more_info-section button:hover {
+  background-color: rgb(38, 44, 135);
+  color: #fff;
+  transition: 0.5s;
 }
