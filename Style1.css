@@ -449,7 +449,8 @@ html {
 .for_more_info-section {
   width: 100%;
   text-align: center;
-  padding: 7rem 0;
+  padding: 5rem 0;
+  margin-top: 3rem;
 }
 
 .for_more_info-section button {
