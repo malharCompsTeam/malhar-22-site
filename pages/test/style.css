@@ -189,7 +189,14 @@
       width: 75rem;
       padding: 1rem 0;
     }
+    .for_more_info-section{
+        padding: 2rem 0;
+    }
+    .for_more_info-section a{
+        font-size: 1.2rem;
+    }
   }
+
   
   /* NAVBAR HAMBURGER BUTTON STYLING */
   
