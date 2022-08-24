@@ -327,7 +327,7 @@ img {
 }
 
 .card5 {
-  height: 32.5rem;
+  height: 30rem;
   margin-top: 10rem;
 }
 
@@ -519,7 +519,7 @@ img {
     height: 45rem;
   }
   .card5{
-    height: 49rem;
+    height: 43rem;
   }
   .card6{
     height: 43.5rem;
@@ -573,7 +573,7 @@ img {
   }
   
   .card_description {
-    margin-top: 1.5rem;
+    margin-top: 2rem;
   }
   .laptop_display{
     visibility: hidden;
