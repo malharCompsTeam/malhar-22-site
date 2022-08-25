@@ -175,6 +175,10 @@ html {
     justify-content: space-between;
     padding: 0.1rem;
   }
+  .for_more_info-section button {
+    padding: 1rem 2rem;
+    margin-top: 15rem;
+  }
 }
 
 @media (min-width: 1051px) {
@@ -188,9 +192,9 @@ html {
     margin-top: -5.5rem;
   }
   .for_more_info-section a {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
-  .for_more_info-section button{
+  .for_more_info-section button {
     padding: 1rem 3rem;
   }
 }
@@ -277,16 +281,10 @@ html {
   .container {
     width: 720px;
   }
-  .for_more_info-section{
-    margin-top: 15rem;
-  }
 }
 @media only screen and (min-width: 64.063em) {
   .container {
     width: 960px;
-  }
-  .for_more_info-section button{
-    padding: 1rem 3rem;
   }
 }
 
@@ -414,7 +412,7 @@ html {
 .controls {
   z-index: 9999;
 }
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 760px) {
   .desktopSvg {
     visibility: hidden;
   }
@@ -443,20 +441,6 @@ html {
     top: -105px;
     left: 60px;
   }
-  .for_more_info-section{
-    margin-top: 15rem;
-  }
-  .for_more_info-section button{
-    padding: 1rem 3rem;
-  }
-}
-@media only screen and (max-width: 420px){
-  .for_more_info-section{
-    margin-top: 13rem;
-  }
-  .for_more_info-section button{
-    padding: 1rem 1rem;
-  }
 }
 .info p {
   line-height: 1.5;
@@ -472,24 +456,22 @@ html {
 .for_more_info-section {
   width: 100%;
   text-align: center;
-  /* padding: 5rem 0; */
-  /* margin-top: 3rem; */
+  padding: 5rem 0;
+  margin-top: 1.5rem;
+  position: fixed;
 }
 
 .for_more_info-section button {
-  
-  background-color: rgb(38, 44, 135);
-  color: white;
+  background-color: #fff;
   /* padding: 1rem 3rem; */
-  /* border: solid 1.5px black; */
+  border: solid 1.5px black;
   border-radius: 0.5rem;
   transition: 0.5s;
   font-family: montserrat, clash grotesk, sans-serif;
 }
 
-
 .for_more_info-section button:hover {
-  background-color: rgb(255, 255, 255);
-  color: black;
+  background-color: rgb(38, 44, 135);
+  color: #fff;
   transition: 0.5s;
 }
