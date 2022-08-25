@@ -175,6 +175,10 @@ html {
     justify-content: space-between;
     padding: 0.1rem;
   }
+  .for_more_info-section button {
+    padding: 1rem 2rem;
+    margin-top: 15rem;
+  }
 }
 
 @media (min-width: 1051px) {
@@ -188,7 +192,10 @@ html {
     margin-top: -5.5rem;
   }
   .for_more_info-section a {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+  }
+  .for_more_info-section button {
+    padding: 1rem 3rem;
   }
 }
 
@@ -450,18 +457,18 @@ html {
   width: 100%;
   text-align: center;
   padding: 5rem 0;
-  margin-top: 3rem;
+  margin-top: 1.5rem;
+  position: fixed;
 }
 
 .for_more_info-section button {
   background-color: #fff;
-  padding: 1rem 3rem;
+  /* padding: 1rem 3rem; */
   border: solid 1.5px black;
   border-radius: 0.5rem;
   transition: 0.5s;
   font-family: montserrat, clash grotesk, sans-serif;
 }
-
 
 .for_more_info-section button:hover {
   background-color: rgb(38, 44, 135);
