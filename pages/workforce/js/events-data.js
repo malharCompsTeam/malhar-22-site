@@ -37,7 +37,12 @@ const eventsPeople = [
   {
     img: "./images/admin.png",
     name: "Admin",
-    text: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem quoeius recusandae officia voluptas sint deserunt dicta nihil nam omnis?`,
+    text: `The rulebook creator of Malhar- Admin, works in the shadows to ensure the
+    smooth functioning of this fest. The baby of all the sub-departments i.e.
+    Contingency Communication is the newest addition to the department. When in
+    doubt, Admin is the department to fall back on. Being the most trustworthy
+    of all, Admin abides by the motto "The show, in case of Malhar, the grand
+    show, must go on."`,
   },
 ];
 
