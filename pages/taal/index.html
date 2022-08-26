@@ -205,7 +205,7 @@
 
         <div class="flipbook-viewport">
           <div class="container" style="width: 100%">
-            <div class="flipbook">
+            <div class="flipbook" style="width: 1000px;">
               <div
                 style="background-image: url(./images/Taal_Draft_1-1-1.png)"
               ></div>
@@ -393,6 +393,8 @@
           });
         }
 
+
+
         // for large mobiles
         else if ($(window).width() > 321 && $(window).width() < 501) {
           turn = new TurnJS(".flipbook", {
@@ -401,9 +403,9 @@
             acceleration: true,
 
             // Width
-            width: 301,
+            width: 351,
             // Height
-            height: 438,
+            height: 500,
             // Elevation
             elevation: 50,
             // Enable gradients
@@ -412,6 +414,8 @@
             autoCenter: true,
           });
         }
+
+
         // for desktop
         else {
           turn = new TurnJS(".flipbook", {
@@ -420,9 +424,9 @@
             acceleration: true,
 
             // Width
-            width: 400,
+            width: 550,
             // Height
-            height: 550,
+            height: 750,
             // Elevation
             elevation: 50,
             // Enable gradients
@@ -546,13 +550,13 @@
         }
 
         .flipbook-viewport .flipbook {
-          width: 922px;
-          height: 600px;
+          width: 10rem;
+          height: 6rem;
         }
 
         .flipbook-viewport .page {
-          width: 461px;
-          height: 600px;
+          width: 10rem;
+          height: 6rem;
           background-color: white;
           background-repeat: no-repeat;
           background-size: 100% 100%;
