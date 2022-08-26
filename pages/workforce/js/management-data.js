@@ -1,50 +1,42 @@
 const managementPeople = [
   {
-    img: "./images/waifu1.jpg",
+    img: "./images/management.webp",
     name: "Management",
-    job: "product manager",
     text: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem quoeius recusandae officia voluptas sint deserunt dicta nihil nam omnis? `,
   },
   {
-    img: "./images/waifu2.jpeg",
+    img: "./images/security.png",
     name: "Security",
-    job: "developer",
     text: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem quoeius recusandae officia voluptas sint deserunt dicta nihil nam omnis?`,
   },
   {
-    img: "./images/waifu3.jpeg",
+    img: "./images/assistance.png",
     name: "Assistance",
-    job: "designer",
     text: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem quoeius recusandae officia voluptas sint deserunt dicta nihil nam omnis?`,
   },
   {
-    img: "./images/waifu4.jpeg",
+    img: "./images/logs.png",
     name: "Logistics",
-    job: "designer",
     text: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem quoeius recusandae officia voluptas sint deserunt dicta nihil nam omnis?`,
   },
   {
-    img: "./images/waifu5.jpeg",
+    img: "./images/texxx.png",
     name: "Technicals",
-    job: "designer",
     text: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem quoeius recusandae officia voluptas sint deserunt dicta nihil nam omnis?`,
   },
   {
-    img: "./images/waifu6.jpeg",
+    img: "./images/finance.png",
     name: "Finance",
-    job: "designer",
     text: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem quoeius recusandae officia voluptas sint deserunt dicta nihil nam omnis?`,
   },
   {
-    img: "./images/waifu7.jpeg",
+    img: "./images/marketing.png",
     name: "Marketing",
-    job: "designer",
     text: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem quoeius recusandae officia voluptas sint deserunt dicta nihil nam omnis?`,
   },
   {
-    img: "./images/waifu8.png",
+    img: "./images/hospitality.png",
     name: "Hospitality",
-    job: "designer",
     text: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem quoeius recusandae officia voluptas sint deserunt dicta nihil nam omnis?`,
   },
 ];
