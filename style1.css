@@ -189,12 +189,13 @@ html {
     padding: 1rem 0;
   }
   .for_more_info-section {
-    margin-top: -5.5rem;
+    /* margin-top: -5.5rem; */
   }
   .for_more_info-section a {
     font-size: 1.3rem;
   }
   .for_more_info-section button {
+    margin-top: 10rem;
     padding: 1rem 3rem;
   }
 }
