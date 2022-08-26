@@ -3,10 +3,9 @@
     src: url(../../font/clash);
   }
 
-body{
-    background-color: lightblue;
-    font-family: "Century Gothic", "sans-serif";
-}
+main{
+  background: linear-gradient(#38a4de, #00b4d8, #1daec5) no-repeat; 
+} 
 
 .SkipLinkText {
     position: absolute;
@@ -247,6 +246,14 @@ body{
       width: 75rem;
     }
   }
+
+  @media (max-width: 380px){
+    .main_title h1{
+      font-size: 4rem;
+    }
+
+
+  }  
   
   /*  */
 
@@ -288,30 +295,60 @@ body{
     color: white;
   }
 
-a img{
+  .main_title h1{
+    font-size: 6rem;
     position: relative;
-    width: 20rem;
+    padding-top: 7.5rem;
+    
+  }
+
+  h1{
+    font-weight: 500;
+    text-align: center;
+    font-family: "Clash Grotesk";
 }
 
+a img{
+    position: relative;
+    width: 12rem;
+    justify-items: center;
+}
+ 
+.sub-title h1{
+
+  position: relative;
+  font-size: 7rem;
+}
+
+.test h1{
+  margin-top: -3rem;
+  font-size: 4rem;
+}
 .title h1{
     position: relative;
     font-size: 4.5rem;
-    padding-top: 7.5rem;
+    margin-top: 6rem; 
 }
 @media (max-width: 1050px) {
     .title h1{
         font-size: 3rem;
-        padding-top: 6rem;
+        margin-top: 5rem;
     }
-    h1{
-        font-size: 2.5rem;
+    .main_title h1{
+      font-size: 5rem;
     }
-
+    .sub-title h1{
+      font-size: 10rem;
+    }
+    .fuck_you h1{
+      font-size: 2.5rem;
+    }
 }
 
 .insta{
     background-color: white;
-    border-radius: 5rem;
+    border-radius: 3.5rem;
+    width: 12rem;
 }
 .sponsors{
     display: flex;
@@ -328,27 +365,17 @@ a img{
     padding: 10rem;
     
 } */
-.spon-1{
+.spon-1, .spon-2, .spon-3, .spon-4, .spon-5, .spon-6, .spon-7, .spon-8{
+  width: 20rem;
     padding: 2rem;
-}
-.spon-2{
-    padding: 2rem;
-}
-.spon-3{
-    padding: 2rem;
-}
-.spon-4{
-    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.spon-5{
-    padding: 2rem;
-}
-.spon-6{
-    padding: 2rem;
-}
-.spon-7{
-    padding: 2rem;
+.spon-8 a img{
+  margin-top: -3rem;
+  width: 20rem;
 }
 
 .fuck_you h1{
@@ -367,8 +394,3 @@ a img{
     border-radius: 3rem;
 }
 
-h1{
-    font-weight: 500;
-    text-align: center;
-    font-family: "Clash Grotesk";
-}
