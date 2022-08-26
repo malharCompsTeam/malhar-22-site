@@ -205,7 +205,7 @@
 
         <div class="flipbook-viewport">
           <div class="container" style="width: 100%">
-            <div class="flipbook" style="width: 1000px;">
+            <div class="flipbook" style="width: 1000px">
               <div
                 style="background-image: url(./images/Taal_Draft_1-1-1.png)"
               ></div>
@@ -319,7 +319,7 @@
         <div class="player">
           <audio class="player__audio viewer">
             <source
-              src="Taal Audiobook.mp3"
+              src="./audio/Taal 22.final final.mp3"
               type="audio/mpeg"
               data-trackid="1"
             />
@@ -328,7 +328,7 @@
           <div class="song-panel">
             <div class="song-info">
               <div class="song-info__title">Taal Audiobook</div>
-              <div class="song-info__artist">Malhar'21</div>
+              <div class="song-info__artist">Malhar'22</div>
               <div
                 class="progress"
                 role="progressbar"
@@ -343,7 +343,7 @@
             <div class="spinner">
               <div
                 class="spinner__disc"
-                style="background-image: url(./images/TAAL\ 2021\ FINAL-01.png)"
+                style="background-image: url(./images/Taal_Draft_1-1-1.png)"
               >
                 <div class="center__disc"></div>
               </div>
@@ -371,6 +371,14 @@
           </div>
         </div>
       </div>
+      <div>
+        <h3 class="footnote">
+          Santoor and Tabla at Assi Ghat, Varanasi by Samuel Corwin |
+          https://freemusicarchive.org/music/Samuel_Corwin Music promoted by
+          https://www.chosic.com/free-music/all/ Creative Commons CC BY 4.0
+          https://creativecommons.org/licenses/by/4.0/
+        </h3>
+      </div>
 
       <script type="text/javascript">
         // for iphone SE and small af devices
@@ -393,8 +401,6 @@
           });
         }
 
-
-
         // for large mobiles
         else if ($(window).width() > 321 && $(window).width() < 501) {
           turn = new TurnJS(".flipbook", {
@@ -414,7 +420,6 @@
             autoCenter: true,
           });
         }
-
 
         // for desktop
         else {
@@ -734,8 +739,6 @@
         progress.addEventListener("mousedown", () => (mousedown = true));
         progress.addEventListener("mouseup", () => (mousedown = false));
       </script>
-
-      
     </main>
   </body>
 </html>
