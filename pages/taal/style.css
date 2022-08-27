@@ -275,7 +275,7 @@ nav {
 }
 .collapse.is-clicked {
   height: 100vh;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
   padding-bottom: 40%;
 }
 
@@ -930,7 +930,7 @@ button.play.playing i {
     top: 0;
     background: linear-gradient(to right, #3a7bd5, #4d7e97);
     text-align: center;
-    padding: 2rem 0;
+    margin-bottom: 30%;
     transition: all 0.3s ease;
   }
   .menu {

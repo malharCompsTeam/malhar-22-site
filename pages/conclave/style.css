@@ -497,6 +497,33 @@ img {
   }
 }
 
+.for_more_info-section {
+  width: 100%;
+  text-align: center;
+  margin-top: 2vh;
+}
+
+.for_more_info-section button {
+  background-color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  transition: 0.5s;
+  font-size: 1.2rem;
+  font-family: clash grotesk;
+}
+
+.for_more_info-section button:hover {
+  background-color: #2199e8;
+  color: #fff;
+  transition: 0.5s;
+}
+
+.for_more_info-section h1{
+  font-size: 4rem;
+  font-weight: 400;
+  font-family: clash grotesk;
+  margin-bottom: 5vh;
+}
 /* for normal chad smartphones */
 @media screen and (min-width: 340px) and (max-width: 768px) {
 
