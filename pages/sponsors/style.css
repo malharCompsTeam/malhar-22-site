@@ -344,12 +344,16 @@ a img {
   border-radius: 3.5rem;
   width: 12rem;
 }
-.ratna{
+.ratna {
   background-color: white;
   border-radius: 0.5rem;
   width: 12rem;
 }
-
+.greenverse {
+  background-color: white;
+  border-radius: 0.5rem;
+  width: 10rem;
+}
 .sponsors {
   display: flex;
   justify-content: center;
@@ -375,7 +379,9 @@ a img {
 .spon-9,
 .spon-10,
 .spon-11,
-.spon-12 {
+.spon-12,
+.spon-13,
+.spon14 {
   width: 20rem;
   padding: 2rem;
   display: flex;
